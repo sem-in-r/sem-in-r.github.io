@@ -1,8 +1,22 @@
-name: "my-website"
+name: "SEMinR Website"
+title: "SEMinR"
+description: |
+  SEMinR's Homepage and Blog
+output_dir: "_site"
 navbar:
-  title: "My Website"
-  left:
-    - text: "Home"
-      href: index.html
+  logo:
+    image: images/logo.png
+    href: https://sem-in-r.github.io
+  search: false
+  right:
+    - text: "Posts"
+      href: posts.html
     - text: "About"
       href: about.html
+cookie_consent:
+  style: simple
+  type: express
+  palette: light
+  lang: en
+  cookies_policy: url
+output: distill::distill_article
