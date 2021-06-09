@@ -2,7 +2,8 @@ name: "SEMinR Website"
 title: "SEMinR"
 description: |
   SEMinR's Homepage and Blog
-output_dir: "_site"
+output_dir: "_build/docs"
+include: [".nojekyll"]
 navbar:
   logo:
     image: images/logo.png

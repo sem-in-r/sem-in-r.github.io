@@ -5,4 +5,4 @@
 .Ruserdata
 
 # Generated _site/ folder is in main branch
-_site
+_build
