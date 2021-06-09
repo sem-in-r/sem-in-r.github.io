@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/2021-05-26-seminr-20-released/",
+    "title": "SEMinR 2.0 Released",
+    "description": "We're proud to announce the release of SEMinR v2.0! So many new features, including the single most requested feature of model visualization created by our brilliant new co-author, André Calero Valdez, and his team at Aachen University.",
+    "author": [
+      {
+        "name": "Soumya Ray",
+        "url": {}
+      }
+    ],
+    "date": "2021-05-26",
+    "categories": [],
+    "contents": "\nSEMinR v2.0SEMinR v2.0 is now released, after months of hard work by our team. To ensure that most obvious issues were fixed before release, we actually soft-released and incorporated early feedback into v2.1.0, which is what you’ll find on CRAN today.\nWe are also delighted to add a new official co-author to the project, André Calero Valdez, who has worked with his team at Aachen University to deliver model visualizations!\nHere’s a breakdown of many of the new features you can look forward to.\nVisualization of graphical models PLS/CBSEM:\nNew set of functions to create plots for PLS-SEM\nA simple fully customizable theme-based visualization that allows web-based ou- ut as well as publication-ready figures (supports shiny, png, svg, pdf, ps, we- etc.)\nSame functions work for CB-SEM models, but uses semPlot under the hood\nA new plot-type to quickly view HTMT results to simplify analysis\nAn interactive web-editor that allows tinkering with plots afterwards (e.g., highlighting)\nNew visualization of results for PLS:\nA new feature to plot interaction plots\nNew visualization for reliability\nAdded metrics for PLS models:\nNew functions for evaluating mediation: total path effects and generate co- idence intervals for indirect effects\nPLSpredict for items\nAdded functions to calculate AIC and BIC\nAdded Cronbach’s alpha to reliability\nNew formatting of summary tables (PLS only):\ncsem/lavaan syntax imports\nCan import csem syntax for PLS estimation using csem2seminr() function\nCan provide lavaan syntax directly to estimate_cbsem() for CBSEM estimation\nHigher Order Constructs updated:\nPLS: results of Higher Order Composite bootstrapping includes bootstrapped re- lts for outer loadings and outer weights\nCBSEM: Higher Order Reflective function now added.\nEnjoy SEMinR v2 and we hope to hear your feedback!\n\n\n\n",
+    "preview": "posts/2021-05-26-seminr-20-released/images/SEMinR-v2_0.png",
+    "last_modified": "2021-05-26T16:11:58+08:00",
+    "input_file": {}
+  }
+]
