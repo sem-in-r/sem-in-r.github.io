@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>SEMinR</title>
+    <link>https://seminr.io/</link>
+    <atom:link href="https://seminr.io/posts.xml" rel="self" type="application/rss+xml"/>
+    <description>SEMinR's Homepage and Blog
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>SEMinR 2.3 Brings PLS-MGA</title>
+      <dc:creator>Soumya Ray</dc:creator>
+      <link>https://seminr.io/posts/2022-01-05-seminr-23-brings-pls-mga</link>
+      <description>SEMinR v2.3 is available for installation from CRAN, and it brings the most requested feature from our users: PLS-MGA.</description>
+      <guid>https://seminr.io/posts/2022-01-05-seminr-23-brings-pls-mga</guid>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2022-01-05-seminr-23-brings-pls-mga/images/SEMinR-v2_3.png" medium="image" type="image/png" width="1264" height="628"/>
+    </item>
+    <item>
+      <title>Our Free to Download Book, PLS-SEM Using R, is a Huge Hit!</title>
+      <dc:creator>Nicholas Danks</dc:creator>
+      <link>https://seminr.io/posts/2022-01-06-pls-sem-using-r-book-now-open-access</link>
+      <description>Our textbook for PLS-SEM Using R has now reached over 45,000 downloads. The book is completely open-access and is accompanied by SEMinR which is free to download.</description>
+      <guid>https://seminr.io/posts/2022-01-06-pls-sem-using-r-book-now-open-access</guid>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2022-01-06-pls-sem-using-r-book-now-open-access/images/978-3-030-80519-7.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>SEMinR 2.0 Released</title>
+      <dc:creator>Soumya Ray</dc:creator>
+      <link>https://seminr.io/posts/2021-05-26-seminr-20-released</link>
+      <description>We're proud to announce the release of SEMinR v2.0! So many new features, including the single most requested feature of model visualization created by our brilliant new co-author, André Calero Valdez, and his team at Aachen University.</description>
+      <guid>https://seminr.io/posts/2021-05-26-seminr-20-released</guid>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2021-05-26-seminr-20-released/images/SEMinR-v2_0.png" medium="image" type="image/png" width="1228" height="820"/>
+    </item>
+  </channel>
+</rss>

@@ -1,19 +1,59 @@
 [
   {
+    "path": "posts/2022-01-05-seminr-23-brings-pls-mga/",
+    "title": "SEMinR 2.3 Brings PLS-MGA",
+    "description": "SEMinR v2.3 is available for installation from CRAN, and it brings the most requested feature from our users: PLS-MGA.",
+    "author": [
+      {
+        "name": "Soumya Ray",
+        "url": {
+          "https://soumyaray.com": {}
+        }
+      }
+    ],
+    "date": "2022-01-05",
+    "categories": [],
+    "contents": "\nSEMinR v2.3Happy New Year to our wonderful SEMinR community! SEMinR v2.3 is available for installation from CRAN, and it brings the most requested feature from our users: PLS-MGA. See a quick demo of how to use it or read the documentation for the new estimate_pls_mga() function after installation with ?estimate_pls_mga.\nSince we released of the major v2 of SEMinR over half a year ago, we have also fixed numerous issues reported by our esteemed users. In particular, we have addressed growing concerns about the instability of Consistent PLS (PLSc) across repeated runs. We have now made PLSc more stable to run in our iterative operations, from bootstrapping to our new PLS-MGA feature, and reported whether we had to discard iterations. We have also started addressing requests for more helpful error messages. Every time we now get an inquiry about a strange error, we take care to offer a more helpful message for future. Please keep sending us your issues and tips, and we will keep releasing fixes in our smaller patches.\n\n\n\n",
+    "preview": "posts/2022-01-05-seminr-23-brings-pls-mga/images/SEMinR-v2_3.png",
+    "last_modified": "2022-01-06T21:39:26+08:00",
+    "input_file": {},
+    "preview_width": 1264,
+    "preview_height": 628
+  },
+  {
+    "path": "posts/2022-01-06-pls-sem-using-r-book-now-open-access/",
+    "title": "Our Free to Download Book, PLS-SEM Using R, is a Huge Hit!",
+    "description": "Our textbook for PLS-SEM Using R has now reached over 45,000 downloads. The book is completely open-access and is accompanied by SEMinR which is free to download.",
+    "author": [
+      {
+        "name": "Nicholas Danks",
+        "url": "https://nicholasdanks.com/"
+      }
+    ],
+    "date": "2022-01-04",
+    "categories": [],
+    "contents": "\nPLS-SEM Using ROur textbook for PLS-SEM Using R has now reached over 45,000 downloads. Congratulations team! Marko Sarstedt, Christian M. Ringle, Joe Hair, Tomas Hult, Soumya Ray. Onwards and upwards!\nThe book is completely open-access and is accompanied by SEMinR which is free to download. I encourage you to take a look!\n\n\n\n",
+    "preview": "posts/2022-01-06-pls-sem-using-r-book-now-open-access/images/978-3-030-80519-7.jpg",
+    "last_modified": "2022-01-06T21:48:30+08:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-05-26-seminr-20-released/",
     "title": "SEMinR 2.0 Released",
     "description": "We're proud to announce the release of SEMinR v2.0! So many new features, including the single most requested feature of model visualization created by our brilliant new co-author, André Calero Valdez, and his team at Aachen University.",
     "author": [
       {
         "name": "Soumya Ray",
-        "url": {}
+        "url": "https://soumyaray.com"
       }
     ],
     "date": "2021-05-26",
     "categories": [],
     "contents": "\nSEMinR v2.0SEMinR v2.0 is now released, after months of hard work by our team. To ensure that most obvious issues were fixed before release, we actually soft-released and incorporated early feedback into v2.1.0, which is what you’ll find on CRAN today.\nWe are also delighted to add a new official co-author to the project, André Calero Valdez, who has worked with his team at Aachen University to deliver model visualizations!\nHere’s a breakdown of many of the new features you can look forward to.\nVisualization of graphical models PLS/CBSEM:\nNew set of functions to create plots for PLS-SEM\nA simple fully customizable theme-based visualization that allows web-based ou- ut as well as publication-ready figures (supports shiny, png, svg, pdf, ps, we- etc.)\nSame functions work for CB-SEM models, but uses semPlot under the hood\nA new plot-type to quickly view HTMT results to simplify analysis\nAn interactive web-editor that allows tinkering with plots afterwards (e.g., highlighting)\nNew visualization of results for PLS:\nA new feature to plot interaction plots\nNew visualization for reliability\nAdded metrics for PLS models:\nNew functions for evaluating mediation: total path effects and generate co- idence intervals for indirect effects\nPLSpredict for items\nAdded functions to calculate AIC and BIC\nAdded Cronbach’s alpha to reliability\nNew formatting of summary tables (PLS only):\ncsem/lavaan syntax imports\nCan import csem syntax for PLS estimation using csem2seminr() function\nCan provide lavaan syntax directly to estimate_cbsem() for CBSEM estimation\nHigher Order Constructs updated:\nPLS: results of Higher Order Composite bootstrapping includes bootstrapped re- lts for outer loadings and outer weights\nCBSEM: Higher Order Reflective function now added.\nEnjoy SEMinR v2 and we hope to hear your feedback!\n\n\n\n",
     "preview": "posts/2021-05-26-seminr-20-released/images/SEMinR-v2_0.png",
-    "last_modified": "2021-05-26T16:11:58+08:00",
-    "input_file": {}
+    "last_modified": "2022-01-06T21:48:55+08:00",
+    "input_file": {},
+    "preview_width": 1228,
+    "preview_height": 820
   }
 ]

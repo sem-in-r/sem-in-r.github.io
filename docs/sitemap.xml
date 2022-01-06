@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://seminr.io/about.html</loc>
+    <lastmod>2021-05-26T15:26:42+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/</loc>
+    <lastmod>2021-05-26T15:54:27+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts.html</loc>
+    <lastmod>2022-01-06T21:49:35+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts/2022-01-05-seminr-23-brings-pls-mga/</loc>
+    <lastmod>2022-01-06T21:39:26+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts/2022-01-06-pls-sem-using-r-book-now-open-access/</loc>
+    <lastmod>2022-01-06T21:48:30+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts/2021-05-26-seminr-20-released/</loc>
+    <lastmod>2022-01-06T21:48:55+08:00</lastmod>
+  </url>
+</urlset>
