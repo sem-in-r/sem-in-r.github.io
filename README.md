@@ -30,7 +30,7 @@ install.packages('distill')
 **Important branches:**
 
 - `main` - major code branch where all changes to the site source code are made
-- `build` - where all rendered content is (*gitignored* -- do not edit in this branch and do not try to push this to Github); note that you will not find the `build` branch in your repo - only the website manager maintains it.
+- `build` - where all rendered content is placed (*gitignored* -- do not edit in this branch and do not try to push this to Github); note that you will not find the `build` branch in your repo - only the website manager maintains it.
 
 **Working with branches:** Please branch out of `main` branch and work in your own branch only! Create your articles/posts and submit a Pull Request (PR) back to main. Do not include the `_build/` folder in your PRs. The website maintainer will re-render your posts or other changes.
 

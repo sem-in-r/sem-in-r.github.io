@@ -4,6 +4,7 @@ description: |
   We're proud to announce the release of SEMinR v2.0! So many new features, including the single most requested feature of model visualization created by our brilliant new co-author, André Calero Valdez, and his team at Aachen University.
 author:
   - name: Soumya Ray
+    url: https://soumyaray.com
 date: 05-26-2021
 preview: images/SEMinR-v2_0.png
 output:

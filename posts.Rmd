@@ -1,5 +1,5 @@
 ---
-title: "SEMinR Blog"
+title: "SEMinR News"
 site: distill::distill_website
 listing: posts
 ---

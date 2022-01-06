@@ -3,6 +3,7 @@ title: "SEMinR"
 description: |
   SEMinR's Homepage and Blog
 output_dir: "_build/docs"
+base_url: https://seminr.io/
 include: [".nojekyll"]
 navbar:
   logo:
