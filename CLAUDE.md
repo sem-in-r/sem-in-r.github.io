@@ -43,6 +43,10 @@ Each post lives in `_posts/YYYY-MM-DD-slug-title/` containing:
 - `images/` — Post-specific images (including thumbnail referenced by `preview:` in frontmatter)
 - Generated `_files/` directory and `.html` output from knitting
 
+## Deployment
+
+- **Domain:** The site is registered at **seminr.io**, which points to the GitHub Pages deployment.
+
 ## Git Workflow
 
 - **`main`** — Source branch; branch from here for changes and submit PRs back
