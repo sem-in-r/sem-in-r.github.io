@@ -7,10 +7,10 @@ allowed-tools: Bash
 
 # Build Site
 
-Render the full Distill site by running:
+Render the full Distill site. Always run from the project root (not from `_build/`):
 
-```r
-Rscript -e 'rmarkdown::render_site()'
+```bash
+cd /Users/soumyaray/Sync/Dropbox/ossdev/rpackages/sem-in-r/website-seminr && Rscript -e 'rmarkdown::render_site()'
 ```
 
-Report any errors or warnings to the user after the build completes.
+After the build completes, ensure the working directory is back at the project root. Report any errors or warnings to the user.

@@ -40,7 +40,7 @@ Publish the rendered site from `_build/docs/` to the `build` branch and push to 
 
 ## Important
 
+- **NEVER `cd` into `_build/`.** Always use `git -C _build` from the project root. Changing into `_build/` shifts the working directory to the `build` branch repo, and all subsequent commands (including ones meant for `main`) will silently run in the wrong repo.
 - The `_build/` directory is a separate git repo on the `build` branch.
-- Use `git -C _build` for all git commands (do not change the working directory).
 - Never force-push.
 - Do not include co-author lines in commit messages.

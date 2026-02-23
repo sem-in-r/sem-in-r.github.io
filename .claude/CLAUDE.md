@@ -49,8 +49,29 @@ Each post lives in `_posts/YYYY-MM-DD-slug-title/` containing:
 
 - **Domain:** The site is registered at **seminr.io**, which points to the GitHub Pages deployment.
 
+## Skills
+
+The following skills are available and should be suggested when appropriate:
+
+| Skill | When to suggest |
+|-------|-----------------|
+| `/build` | User asks to build, render, or rebuild the site |
+| `/publish` | User asks to publish, deploy, or push the built site to GitHub Pages |
+
+**When the user asks to "commit", "push", or "commit and push":** this almost always refers to the **`main`** branch (source files). If the context suggests the user may want to publish the rendered site instead (e.g., they just ran `/build`, or they mention the live site), **ask whether they meant to use `/publish`** before proceeding.
+
 ## Git Workflow
 
-- **`main`** — Source branch; branch from here for changes and submit PRs back
-- **`build`** — Rendered content managed only by the website maintainer (gitignored locally)
-- Do **not** include `_build/` in PRs — the maintainer re-renders after merge
+This repo uses two branches that correspond to two separate git checkouts:
+
+| Branch | Directory | Contents |
+|--------|-----------|----------|
+| **`main`** | Project root (`.`) | Source `.Rmd` files, config, skills — the working branch |
+| **`build`** | `_build/` | Rendered HTML output served by GitHub Pages |
+
+The `_build/` folder is a **separate git repo** checked out on the `build` branch of the same remote. It is gitignored by `main`.
+
+- Branch from `main` for changes and submit PRs back.
+- Use `git` (or `git -C .`) for the source repo on `main`.
+- Use `git -C _build` for the rendered-output repo on `build` — never `cd` into `_build/`.
+- Do **not** include `_build/` in PRs — the maintainer re-renders after merge.
