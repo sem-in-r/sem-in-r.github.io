@@ -2,16 +2,15 @@
 title: "About Us"
 ---
 
-# Primary Authors
+# Authors
 
+* [Nicholas Danks](https://nicholasdanks.com) (primary maintainer)
 * [Soumya Ray](https://soumyaray.com)
-* [Nicholas Danks](https://nicholasdanks.com)
 * [André Calero Valdez](https://calerovaldez.com/)
 
 # Key Contributors
 
 * [James Uanhoro](https://www.jamesuanhoro.com/) (ten Berge factor extraction, advice on covariance-based methods)
-* [Arturo Heynar Cano Bejar](https://www.iss.nthu.edu.tw/PhD/PhD-Students/arturo-h-cano-bejar) (evaluation and testing of PLS and CBSEM models)
 * [Johannes Nakayama](https://github.com/JohannesNakayama) (contributions to the model visualization functionality)
 
 And many thanks to the growing number of folks who have reached out with 
