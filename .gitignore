@@ -6,3 +6,7 @@
 
 # Generated _site/ folder is in main branch
 _build
+
+# Claude Code local config (allow skills/)
+.claude/*
+!.claude/skills/
