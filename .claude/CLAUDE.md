@@ -27,6 +27,8 @@ distill::create_post("Title of your post")
 
 Output goes to `_build/docs/` (gitignored).
 
+**Important:** Any `.md` or `.Rmd` file in the project root (outside of dotfolders like `.claude/` or underscore-prefixed dirs like `_posts/`) will be rendered into HTML by `rmarkdown::render_site()`. Keep non-site markdown files inside dotfolders to avoid unwanted build output.
+
 ## Architecture
 
 - **`_site.yml`** — Main site config: navbar, output directory (`_build/docs`), base URL, cookie consent
