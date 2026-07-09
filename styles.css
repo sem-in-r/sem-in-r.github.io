@@ -100,3 +100,22 @@
   align-items: center;
   gap: 0.5em;
 }
+
+/* Navbar branding: the white SEMinR wordmark is the sole brand and home link.
+   Hide the redundant "SEMinR" site-title text and keep the logo visible at
+   every width. */
+.distill-site-header .title {
+  display: none !important;
+}
+
+/* The title text used to carry the nav bar's height; with it hidden, restore
+   matching vertical padding on the logo so the right-hand links don't wrap. */
+.distill-site-header .logo {
+  padding: 14px 10px !important;
+}
+
+.distill-site-header .logo img {
+  display: inline-block !important;
+  max-height: 24px;
+  vertical-align: middle;
+}

@@ -8,8 +8,8 @@ favicon: images/seminr_logos/favicon.png
 include: [".nojekyll"]
 navbar:
   logo:
-    image: images/seminr_logos/seminr-logo.png
-    href: https://sem-in-r.github.io
+    image: images/seminr_logos/seminr-logo-white.png
+    href: index.html
   search: false
   right:
     - text: "Packages"
@@ -20,4 +20,6 @@ navbar:
       href: extras.html
     - text: "Community"
       href: community.html
-output: distill::distill_article
+output:
+  distill::distill_article:
+    css: styles.css
