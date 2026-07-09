@@ -93,6 +93,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <title>SEMinR: SEMinR News</title>
 
 
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -1839,7 +1840,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1849,18 +1850,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script type="text/javascript" src="https://www.cookieconsent.com/releases/3.1.0/cookie-consent.js"></script>
-  <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function () {
-  cookieconsent.run({
-  'notice_banner_type':'simple',
-  'consent_type': 'express',
-  'palette': 'light',
-  'language': 'en',
-  'website_name': 'SEMinR Website',
-  'cookies_policy_url': 'url',
-  'change_preferences_selector':'#CookiePreferences'
-  });});</script>
   <!--/radix_placeholder_site_in_header-->
 
 
@@ -1880,13 +1869,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a class="logo" href="https://sem-in-r.github.io">
-<img src="images/logo.png" alt="Logo"/>
+<img src="images/seminr-logo.png" alt="Logo"/>
 </a>
 <a href="index.html" class="title">SEMinR</a>
 </div>
 <div class="nav-right">
+<a href="packages.html">Packages</a>
 <a href="posts.html">Posts</a>
-<a href="about.html">About</a>
+<a href="extras.html">Extras</a>
+<a href="community.html">Community</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2030,6 +2021,78 @@ function init_posts_list() {
 <div class="posts-container posts-apply-limit l-page">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="SEMinR News">SEMinR News</h1>
+<a href="posts/2026-07-09-one-seminr-many-languages/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">July 9, 2026</div>
+<div class="dt-authors">
+<div class="dt-author">Soumya Ray</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2026-07-09-one-seminr-many-languages/images/SEMinR-ports.png"/>
+</div>
+<div class="description">
+<h2>One SEMinR, Many Languages</h2>
+<div class="dt-tags"></div>
+<p>SEMinR is no longer R-only: experimental ports now bring the same toolkit to
+other languages, starting with Python and JavaScript/TypeScript. Each port
+mirrors the R API and is validated for numerical parity against the R package
+using golden fixtures — so you can stay in the language your model analysis
+lives in.</p>
+</div>
+</a>
+<a href="posts/2026-05-25-seminr-250-released/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">May 25, 2026</div>
+<div class="dt-authors">
+<div class="dt-author">Soumya Ray</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2026-05-25-seminr-250-released/images/SEMinR-logo.jpg"/>
+</div>
+<div class="description">
+<h2>SEMinR 2.5.0 Released</h2>
+<div class="dt-tags"></div>
+<p>SEMinR v2.5.0 is now on CRAN, bringing prediction to every interaction type, more flexible plots, a public accessor API for developers, and a round of bug fixes.</p>
+</div>
+</a>
+<a href="posts/2026-04-21-introducing-seminrextras/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">April 21, 2026</div>
+<div class="dt-authors">
+<div class="dt-author">Nicholas Danks</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2026-04-21-introducing-seminrextras/images/SEMinR-logo.jpg"/>
+</div>
+<div class="description">
+<h2>Introducing seminrExtras</h2>
+<div class="dt-tags"></div>
+<p>seminrExtras 1.0.0 is now on CRAN — a companion package for SEMinR that brings the advanced PLS-SEM assessment toolkit (prediction, necessity, heterogeneity, measurement confirmation, and overfit diagnostics) into R.</p>
+</div>
+</a>
+<a href="posts/2026-02-21-seminr-242-on-cran/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">Feb. 21, 2026</div>
+<div class="dt-authors">
+<div class="dt-author">Soumya Ray</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2026-02-21-seminr-242-on-cran/images/SEMinR-logo.jpg"/>
+</div>
+<div class="description">
+<h2>SEMinR v2.4.2 on CRAN</h2>
+<div class="dt-tags"></div>
+<p>SEMinR v2.4.2 is now on CRAN. Rounding up everything that landed across v2.4.0 and v2.4.2 — bootstrap p-values, missing-data handling, and a batch of bug fixes — plus a look at what's coming next.</p>
+</div>
+</a>
 <a href="posts/2022-01-05-seminr-23-brings-pls-mga/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
@@ -2056,7 +2119,7 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2022-01-06-pls-sem-using-r-book-now-open-access/images/978-3-030-80519-7.jpg"/>
+<img data-src="posts/2022-01-06-pls-sem-using-r-book-now-open-access/images/978-3-030-80519-7.jpg"/>
 </div>
 <div class="description">
 <h2>Our Free to Download Book, PLS-SEM Using R, is a Huge Hit!</h2>
@@ -2073,7 +2136,7 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-05-26-seminr-20-released/images/SEMinR-v2_0.png"/>
+<img data-src="posts/2021-05-26-seminr-20-released/images/SEMinR-v2_0.png"/>
 </div>
 <div class="description">
 <h2>SEMinR 2.0 Released</h2>

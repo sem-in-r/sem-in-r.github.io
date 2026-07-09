@@ -1,0 +1,6 @@
+# CLAUDE.local.md lives in the source project root and is rendered into HTML by
+# rmarkdown::render_site() (the site generator renders every non-underscore root
+# .md and offers no way to exclude it). It contains private local notes and must
+# never be published. Ignore its rendered output here on the build branch.
+docs/CLAUDE.local.html
+docs/CLAUDE.local_files/

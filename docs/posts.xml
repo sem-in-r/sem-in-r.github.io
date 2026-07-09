@@ -6,8 +6,53 @@
     <atom:link href="https://seminr.io/posts.xml" rel="self" type="application/rss+xml"/>
     <description>SEMinR's Homepage and Blog
 </description>
+    <image>
+      <title>SEMinR</title>
+      <url>https://seminr.io/images/favicon.png</url>
+      <link>https://seminr.io/</link>
+    </image>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>One SEMinR, Many Languages</title>
+      <dc:creator>Soumya Ray</dc:creator>
+      <link>https://seminr.io/posts/2026-07-09-one-seminr-many-languages</link>
+      <description>SEMinR is no longer R-only: experimental ports now bring the same toolkit to
+other languages, starting with Python and JavaScript/TypeScript. Each port
+mirrors the R API and is validated for numerical parity against the R package
+using golden fixtures — so you can stay in the language your model analysis
+lives in.</description>
+      <guid>https://seminr.io/posts/2026-07-09-one-seminr-many-languages</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2026-07-09-one-seminr-many-languages/images/SEMinR-ports.png" medium="image" type="image/png" width="1120" height="455"/>
+    </item>
+    <item>
+      <title>SEMinR 2.5.0 Released</title>
+      <dc:creator>Soumya Ray</dc:creator>
+      <link>https://seminr.io/posts/2026-05-25-seminr-250-released</link>
+      <description>SEMinR v2.5.0 is now on CRAN, bringing prediction to every interaction type, more flexible plots, a public accessor API for developers, and a round of bug fixes.</description>
+      <guid>https://seminr.io/posts/2026-05-25-seminr-250-released</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2026-05-25-seminr-250-released/images/SEMinR-logo.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Introducing seminrExtras</title>
+      <dc:creator>Nicholas Danks</dc:creator>
+      <link>https://seminr.io/posts/2026-04-21-introducing-seminrextras</link>
+      <description>seminrExtras 1.0.0 is now on CRAN — a companion package for SEMinR that brings the advanced PLS-SEM assessment toolkit (prediction, necessity, heterogeneity, measurement confirmation, and overfit diagnostics) into R.</description>
+      <guid>https://seminr.io/posts/2026-04-21-introducing-seminrextras</guid>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2026-04-21-introducing-seminrextras/images/SEMinR-logo.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>SEMinR v2.4.2 on CRAN</title>
+      <dc:creator>Soumya Ray</dc:creator>
+      <link>https://seminr.io/posts/2026-02-21-seminr-242-on-cran</link>
+      <description>SEMinR v2.4.2 is now on CRAN. Rounding up everything that landed across v2.4.0 and v2.4.2 — bootstrap p-values, missing-data handling, and a batch of bug fixes — plus a look at what's coming next.</description>
+      <guid>https://seminr.io/posts/2026-02-21-seminr-242-on-cran</guid>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2026-02-21-seminr-242-on-cran/images/SEMinR-logo.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>SEMinR 2.3 Brings PLS-MGA</title>
       <dc:creator>Soumya Ray</dc:creator>

@@ -89,27 +89,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>SEMinR: Welcome to SEMinR</title>
+  <title>SEMinR: Community</title>
 
+  <meta property="description" itemprop="description" content="The people behind SEMinR and where to connect with other users."/>
 
   <link rel="icon" type="image/png" href="images/favicon.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="SEMinR: Welcome to SEMinR"/>
+  <meta property="og:title" content="SEMinR: Community"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="The people behind SEMinR and where to connect with other users."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="SEMinR"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="SEMinR: Welcome to SEMinR"/>
+  <meta property="twitter:title" content="SEMinR: Community"/>
+  <meta property="twitter:description" content="The people behind SEMinR and where to connect with other users."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","output"]}},"value":[{"type":"character","attributes":{},"value":["Welcome to SEMinR"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css"]}},"value":[{"type":"character","attributes":{},"value":["styles.css"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["Community"]},{"type":"character","attributes":{},"value":["The people behind SEMinR and where to connect with other users."]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1851,7 +1854,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -1860,7 +1862,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Welcome to SEMinR","authors":[]}
+{"title":"Community","description":"The people behind SEMinR and where to connect with other users.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1887,175 +1889,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Welcome to SEMinR</h1>
+<h1>Community</h1>
 
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>The people behind SEMinR and where to connect with other users.</p></p>
 </div>
 
 
 <div class="d-article">
-<style>
-/* Homepage only: drop the auto-generated "Welcome to SEMinR" title and the
-   byline divider beneath it, letting the logo lead the page. */
-.d-title { display: none; }
-d-byline { display: none; }
-</style>
-<p><img src="images/seminr-hero.png" alt="SEMinR" class="hero-logo"></p>
-<div class="home-badges">
-<p><a href="https://cran.r-project.org/package=seminr"><img src="https://www.r-pkg.org/badges/version/seminr" alt="CRAN version"></a>
-<a href="https://cran.r-project.org/package=seminr"><img src="https://cranlogs.r-pkg.org/badges/grand-total/seminr" alt="CRAN downloads"></a></p>
-</div>
-<p>SEMinR allows users to easily create and modify structural equation models (SEM). It allows estimation using either covariance-based SEM (CBSEM, such as LISREL/Lavaan), or Partial Least Squares Path Modeling (PLS-PM, such as SmartPLS/semPLS).</p>
-<div class="multilang-note">
-<p><span class="multilang-logos">
-<img src="images/logos/r.svg" alt="R">
-<img src="images/logos/python.svg" alt="Python">
-<img src="images/logos/typescript.svg" alt="TypeScript">
-</span>
-<span><strong>SEMinR speaks your language.</strong> Beyond the original R package,
-SEMinR is being ported to Python and TypeScript — both are
-<strong>experimental</strong> for now and validated against the R base for
-numerical parity. See the <a href="packages.html">Packages</a> page to get started.</span></p>
-</div>
-<p>Main features of using SEMinR:</p>
+<h1 id="get-involved">Get involved</h1>
+<p>SEMinR is an open-source project, and its community is the best place to get
+help, share your work, and shape where the package goes next.</p>
 <ul>
-<li>A <em>natural</em> feeling, <em>domain-specific</em> language to build and estimate SEMs</li>
-<li><em>High-level functions</em> to quickly specify interactions and complicated structural models</li>
-<li><em>Modular design</em> of models that promotes reuse of model components</li>
-<li>Encourages <em>best practices</em> by use of smart defaults and warnings</li>
+<li><strong>Facebook group</strong> — join the <a href="https://www.facebook.com/groups/seminr">SEMinR user community on Facebook</a> to ask questions, discuss PLS-SEM and CBSEM, and connect with the developers and other users.</li>
+<li><strong>Issue tracker</strong> — report bugs or request features on the <a href="https://github.com/sem-in-r/seminr/issues">GitHub issue tracker</a>.</li>
+<li><strong>Source code</strong> — browse or contribute to the code on <a href="https://github.com/sem-in-r/seminr">GitHub</a>.</li>
 </ul>
-<p>Take a look at the easy syntax and modular design — the same model, in whichever language you prefer:</p>
-<div class="code-tabs">
-<div class="code-tabs-nav" role="tablist">
-<button class="code-tab active" data-lang="r" type="button">
-R
-</button>
-<button class="code-tab" data-lang="python" type="button">
-Python
-</button>
-<button class="code-tab" data-lang="typescript" type="button">
-TypeScript
-</button>
-</div>
-<div class="code-panel active" data-lang="r">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define measurements with familiar terms: reflective, composite, multi-item constructs, etc.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>measurements <span class="ot">&lt;-</span> <span class="fu">constructs</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reflective</span>(<span class="st">&quot;Image&quot;</span>,      <span class="fu">multi_items</span>(<span class="st">&quot;IMAG&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)),</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">composite</span>(<span class="st">&quot;Expectation&quot;</span>, <span class="fu">multi_items</span>(<span class="st">&quot;CUEX&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">composite</span>(<span class="st">&quot;Loyalty&quot;</span>,     <span class="fu">multi_items</span>(<span class="st">&quot;CUSL&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">weights =</span> mode_B),</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">composite</span>(<span class="st">&quot;Complaints&quot;</span>,  <span class="fu">single_item</span>(<span class="st">&quot;CUSCO&quot;</span>))</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create four relationships (two regressions) in one line!</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>structure <span class="ot">&lt;-</span> <span class="fu">relationships</span>(</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paths</span>(<span class="at">from =</span> <span class="fu">c</span>(<span class="st">&quot;Image&quot;</span>, <span class="st">&quot;Expectation&quot;</span>), <span class="at">to =</span> <span class="fu">c</span>(<span class="st">&quot;Complaints&quot;</span>, <span class="st">&quot;Loyalty&quot;</span>))</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate the model with PLS (Consistent PLS for the reflective construct)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>pls_model <span class="ot">&lt;-</span> <span class="fu">estimate_pls</span>(<span class="at">data =</span> mobi, measurements, structure)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-estimate the same model as purely reflective using CBSEM</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>cbsem_model <span class="ot">&lt;-</span> <span class="fu">estimate_cbsem</span>(<span class="at">data =</span> mobi, <span class="fu">as.reflective</span>(measurements), structure)</span></code></pre></div>
-</div>
-<div class="code-panel" data-lang="python">
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> seminr <span class="im">import</span> (</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    constructs, reflective, composite, multi_items, single_item, mode_B,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    relationships, paths, estimate_pls, estimate_cbsem, as_reflective,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> seminr.datasets <span class="im">import</span> load_mobi</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>mobi <span class="op">=</span> load_mobi()</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Define measurements with familiar terms: reflective, composite, multi-item constructs, etc.</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>measurements <span class="op">=</span> constructs(</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    reflective(<span class="st">&quot;Image&quot;</span>,      multi_items(<span class="st">&quot;IMAG&quot;</span>, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])),</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    composite(<span class="st">&quot;Expectation&quot;</span>, multi_items(<span class="st">&quot;CUEX&quot;</span>, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])),</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    composite(<span class="st">&quot;Loyalty&quot;</span>,     multi_items(<span class="st">&quot;CUSL&quot;</span>, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]), weights<span class="op">=</span>mode_B),</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    composite(<span class="st">&quot;Complaints&quot;</span>,  single_item(<span class="st">&quot;CUSCO&quot;</span>)),</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create four relationships (two regressions) in one line!</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>structure <span class="op">=</span> relationships(</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    paths([<span class="st">&quot;Image&quot;</span>, <span class="st">&quot;Expectation&quot;</span>], [<span class="st">&quot;Complaints&quot;</span>, <span class="st">&quot;Loyalty&quot;</span>]),</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate the model with PLS (Consistent PLS for the reflective construct)</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>pls_model <span class="op">=</span> estimate_pls(mobi, measurements, structure)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-estimate the same model as purely reflective using CBSEM</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>cbsem_model <span class="op">=</span> estimate_cbsem(mobi, as_reflective(measurements), structure)</span></code></pre></div>
-</div>
-<div class="code-panel" data-lang="typescript">
-<div class="sourceCode" id="cb3"><pre class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  parseCsv<span class="op">,</span> constructs<span class="op">,</span> reflective<span class="op">,</span> composite<span class="op">,</span> multiItems<span class="op">,</span> singleItem<span class="op">,</span> modeB<span class="op">,</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  relationships<span class="op">,</span> paths<span class="op">,</span> estimatePls<span class="op">,</span> estimateCbsem<span class="op">,</span> asReflective<span class="op">,</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>} <span class="im">from</span> <span class="st">&quot;@seminr/core&quot;</span><span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Load your data — any way of obtaining CSV text works</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> mobi <span class="op">=</span> <span class="fu">parseCsv</span>(<span class="cf">await</span> Bun<span class="op">.</span><span class="fu">file</span>(<span class="st">&quot;mobi.csv&quot;</span>)<span class="op">.</span><span class="fu">text</span>())<span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">// Define measurements with familiar terms: reflective, composite, multi-item constructs, etc.</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> measurements <span class="op">=</span> <span class="fu">constructs</span>(</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reflective</span>(<span class="st">&quot;Image&quot;</span><span class="op">,</span>      <span class="fu">multiItems</span>(<span class="st">&quot;IMAG&quot;</span><span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]))<span class="op">,</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">composite</span>(<span class="st">&quot;Expectation&quot;</span><span class="op">,</span> <span class="fu">multiItems</span>(<span class="st">&quot;CUEX&quot;</span><span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>]))<span class="op">,</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">composite</span>(<span class="st">&quot;Loyalty&quot;</span><span class="op">,</span>     <span class="fu">multiItems</span>(<span class="st">&quot;CUSL&quot;</span><span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>])<span class="op">,</span> modeB)<span class="op">,</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">composite</span>(<span class="st">&quot;Complaints&quot;</span><span class="op">,</span>  <span class="fu">singleItem</span>(<span class="st">&quot;CUSCO&quot;</span>))<span class="op">,</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">// Create four relationships (two regressions) in one line!</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> structure <span class="op">=</span> <span class="fu">relationships</span>(</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paths</span>([<span class="st">&quot;Image&quot;</span><span class="op">,</span> <span class="st">&quot;Expectation&quot;</span>]<span class="op">,</span> [<span class="st">&quot;Complaints&quot;</span><span class="op">,</span> <span class="st">&quot;Loyalty&quot;</span>])<span class="op">,</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">// Estimate the model with PLS (Consistent PLS for the reflective construct)</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> plsModel <span class="op">=</span> <span class="fu">estimatePls</span>(mobi<span class="op">,</span> measurements<span class="op">,</span> structure)<span class="op">;</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">// Re-estimate the same model as purely reflective using CBSEM</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> cbsemModel <span class="op">=</span> <span class="fu">estimateCbsem</span>(mobi<span class="op">,</span> <span class="fu">asReflective</span>(measurements)<span class="op">,</span> structure)<span class="op">;</span></span></code></pre></div>
-</div>
-</div>
-<script>
-document.querySelectorAll('.code-tabs').forEach(function (tabs) {
-  var buttons = tabs.querySelectorAll('.code-tab');
-  var panels = tabs.querySelectorAll('.code-panel');
-  buttons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      var lang = button.getAttribute('data-lang');
-      buttons.forEach(function (b) { b.classList.toggle('active', b === button); });
-      panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-lang') === lang); });
-    });
-  });
-});
-</script>
-<h2 id="one-model-several-estimators">One model, several estimators</h2>
-<p>Specify a model once, then estimate it with the technique that fits your question:</p>
+<h1 id="authors">Authors</h1>
 <ul>
-<li><strong>Partial Least Squares Path Modeling (PLS-PM)</strong> — variance-based estimation of composites and common factors, automatically switching to <em>Consistent PLS (PLSc)</em> for reflective constructs, with bias-corrected interactions, <em>out-of-sample prediction</em> via PLSpredict, and high-performance multi-core bootstrapping.</li>
-<li><strong>Covariance-based SEM (CBSEM)</strong> — covariance-based estimation via the <a href="https://lavaan.ugent.be">lavaan</a> package, with interactions, ten Berge factor-score extraction, and VIF and other validity assessments.</li>
-<li><strong>Confirmatory Factor Analysis (CFA)</strong> — evaluate just the measurement model, returning both results and the underlying lavaan syntax.</li>
+<li><a href="https://nicholasdanks.com">Nicholas Danks</a> (primary CRAN maintainer)</li>
+<li><a href="https://soumyaray.com">Soumya Ray</a> (creator and maintainer)</li>
+<li><a href="https://calerovaldez.com/">André Calero Valdez</a> (maintainer)</li>
 </ul>
-<p>SEMinR is continuously tested against leading SEM software — SmartPLS, ADANCO, semPLS, and matrixpls — to ensure parity of outcomes.</p>
-<h2 id="visualize-your-models">Visualize your models</h2>
-<p>Plot any supported model with a simple <code>plot()</code> method and save it to file, with customizable themes:</p>
-<figure>
-<img src="images/model.png" alt="A bootstrapped SEMinR model plotted with DiagrammeR" />
-<figcaption aria-hidden="true">A bootstrapped SEMinR model plotted with DiagrammeR</figcaption>
-</figure>
-<h2 id="modeling-features">Modeling features</h2>
-<p>SEMinR goes well beyond simple path models, with high-level functions for the
-techniques modern SEM research relies on:</p>
+<h1 id="key-contributors">Key Contributors</h1>
 <ul>
-<li><strong>Interactions &amp; moderation</strong> — add <code>interaction_term()</code>s using any of three methods (<code>two_stage</code>, <code>product_indicator</code>, or <code>orthogonal</code>), or <code>quadratic_term()</code>s, with known biases in PLS interaction estimates automatically corrected.</li>
-<li><strong>Higher-order constructs</strong> — build second-order composites and common factors with <code>higher_composite()</code> via the two-stage approach.</li>
-<li><strong>Mediation &amp; moderation analysis</strong> — specify and assess mediating and moderating relationships in both PLS-PM and CBSEM.</li>
-<li><strong>Multi-group analysis (PLS-MGA)</strong> — test whether structural paths differ significantly across subgroups of your data.</li>
-<li><strong>Out-of-sample prediction (PLSpredict)</strong> — generate predictions with k-fold cross-validation or LOOCV across all interaction methods, with multi-core parallelization.</li>
-<li><strong>Comprehensive assessment</strong> — reliability (Cronbach’s α, ρA, ρC, AVE), discriminant validity (HTMT, Fornell–Larcker, cross-loadings), collinearity (VIF), and effect sizes (f²) come built in.</li>
-<li><strong>And much more via <a href="extras.html">seminrExtras</a></strong> — composite overfit analysis (COA), congruence testing, CVPAT predictive testing, mediator predictive contribution (PCM), importance-performance analysis (IPMA &amp; cIPMA), necessary condition analysis (NCA), confirmatory tetrad analysis (CTA-PLS), and unobserved heterogeneity (FIMIX &amp; PLS-POS).</li>
+<li><a href="https://www.jamesuanhoro.com/">James Uanhoro</a> (ten Berge factor extraction, advice on covariance-based methods)</li>
+<li><a href="https://github.com/JohannesNakayama">Johannes Nakayama</a> (contributions to the model visualization functionality)</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>And many thanks to the growing number of folks who have reached out with
+feature requests, bug reports, and encouragement. You keep us going!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -89,26 +89,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>SEMinR: About Us</title>
+  <title>SEMinR: seminrExtras</title>
 
+  <meta property="description" itemprop="description" content="Advanced modeling and analysis tools that extend SEMinR."/>
 
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="SEMinR: About Us"/>
+  <meta property="og:title" content="SEMinR: seminrExtras"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Advanced modeling and analysis tools that extend SEMinR."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="SEMinR"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="SEMinR: About Us"/>
+  <meta property="twitter:title" content="SEMinR: seminrExtras"/>
+  <meta property="twitter:description" content="Advanced modeling and analysis tools that extend SEMinR."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["About Us"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["seminrExtras"]},{"type":"character","attributes":{},"value":["Advanced modeling and analysis tools that extend SEMinR.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","css"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"character","attributes":{},"value":["styles.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1838,7 +1842,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1848,20 +1852,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script type="text/javascript" src="https://www.cookieconsent.com/releases/3.1.0/cookie-consent.js"></script>
-  <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function () {
-  cookieconsent.run({
-  'notice_banner_type':'simple',
-  'consent_type': 'express',
-  'palette': 'light',
-  'language': 'en',
-  'website_name': 'SEMinR Website',
-  'cookies_policy_url': 'url',
-  'change_preferences_selector':'#CookiePreferences'
-  });});</script>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -1870,7 +1863,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About Us","authors":[]}
+{"title":"seminrExtras","description":"Advanced modeling and analysis tools that extend SEMinR.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1879,13 +1872,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a class="logo" href="https://sem-in-r.github.io">
-<img src="images/logo.png" alt="Logo"/>
+<img src="images/seminr-logo.png" alt="Logo"/>
 </a>
 <a href="index.html" class="title">SEMinR</a>
 </div>
 <div class="nav-right">
+<a href="packages.html">Packages</a>
 <a href="posts.html">Posts</a>
-<a href="about.html">About</a>
+<a href="extras.html">Extras</a>
+<a href="community.html">Community</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1895,28 +1890,190 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About Us</h1>
+<h1>seminrExtras</h1>
 
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>Advanced modeling and analysis tools that extend SEMinR.</p></p>
 </div>
 
 
 <div class="d-article">
-<h1 id="authors">Authors</h1>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
-<li><a href="https://nicholasdanks.com">Nicholas Danks</a> (primary maintainer)</li>
-<li><a href="https://soumyaray.com">Soumya Ray</a></li>
-<li><a href="https://calerovaldez.com/">André Calero Valdez</a></li>
+<li><a href="#installation" id="toc-installation">Installation</a></li>
+<li><a href="#what-it-provides" id="toc-what-it-provides">What it provides</a></li>
+<li><a href="#function-reference" id="toc-function-reference">Function reference</a></li>
+<li><a href="#textbook-demos" id="toc-textbook-demos">Textbook demos</a></li>
+<li><a href="#links" id="toc-links">Links</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
 </ul>
-<h1 id="key-contributors">Key Contributors</h1>
+</nav>
+</div>
+<p><a href="https://github.com/sem-in-r/seminrExtras"><strong>seminrExtras</strong></a> is a supplementary
+package for <a href="index.html">SEMinR</a> — not a standalone package. It adds advanced
+tools for evaluating and validating PLS-SEM models estimated with SEMinR. Every
+function accepts an estimated <code>seminr</code> model object and returns results with
+<code>print</code>, <code>summary</code>, and <code>plot</code> methods.</p>
+<p>It is also the home of the example models used in the <em>Partial Least Squares
+Structural Equation Modeling (PLS-SEM) using R</em> workbook (Hair et al., 2026).</p>
+<h2 id="installation">Installation</h2>
+<p><strong>Install the released version from CRAN:</strong></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"seminrExtras"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p><strong>Or install the development version from GitHub:</strong></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># install.packages("remotes")</span></span>
+<span><span class='fu'>remotes</span><span class='fu'>::</span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span><span class='st'>"sem-in-r/seminrExtras"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Then load it alongside SEMinR:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/sem-in-r/seminr'>seminr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/sem-in-r/seminrExtras'>seminrExtras</a></span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h2 id="what-it-provides">What it provides</h2>
+<p>seminrExtras implements a range of methods for advanced PLS-SEM assessment:</p>
 <ul>
-<li><a href="https://www.jamesuanhoro.com/">James Uanhoro</a> (ten Berge factor extraction, advice on covariance-based methods)</li>
-<li><a href="https://github.com/JohannesNakayama">Johannes Nakayama</a> (contributions to the model visualization functionality)</li>
+<li><strong>Composite Overfit Analysis (COA)</strong> — detect observation-level overfitting via predictive deviance trees and parameter instability analysis (Danks, Ray, &amp; Shmueli, 2024).</li>
+<li><strong>Congruence testing</strong> — bootstrapped congruence coefficient testing for construct validity (Franke, Sarstedt, &amp; Danks, 2021).</li>
+<li><strong>Cross-Validated Predictive Ability Test (CVPAT)</strong> — compare a model’s predictive performance against benchmarks or alternative models (Liengaard et al., 2021; Sharma et al., 2023).</li>
+<li><strong>Predictive Contribution of the Mediator (PCM)</strong> — test whether a mediating construct improves out-of-sample predictive accuracy (Danks, 2021).</li>
+<li><strong>Importance-Performance Map Analysis (IPMA &amp; cIPMA)</strong> — identify constructs that are both important and, via Necessary Condition Analysis integration, necessary (Ringle &amp; Sarstedt, 2016; Hauff et al., 2024).</li>
+<li><strong>Necessary Condition Analysis (NCA &amp; NCA-ESSE)</strong> — test whether predictors are necessary conditions for an outcome, complementing PLS-SEM’s sufficiency logic, with an effect-size sensitivity extension (Dul, 2016; Becker et al., 2026).</li>
+<li><strong>Confirmatory Tetrad Analysis (CTA-PLS)</strong> — empirically test whether a construct’s measurement model is reflective or formative (Gudergan et al., 2008).</li>
+<li><strong>Unobserved heterogeneity</strong> — detect latent classes via <strong>FIMIX-PLS</strong> (EM-based probabilistic segmentation) and <strong>PLS-POS</strong> (deterministic prediction-oriented segmentation).</li>
 </ul>
-<p>And many thanks to the growing number of folks who have reached out with
-feature requests, bug reports, and encouragement. You keep us going!</p>
+<h2 id="function-reference">Function reference</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>assess_cvpat()</code></td>
+<td>CVPAT against LM and IA benchmarks</td>
+</tr>
+<tr class="even">
+<td><code>assess_cvpat_compare()</code></td>
+<td>Compare predictive loss of two PLS models</td>
+</tr>
+<tr class="odd">
+<td><code>assess_pcm()</code></td>
+<td>Predictive Contribution of the Mediator</td>
+</tr>
+<tr class="even">
+<td><code>assess_ipma()</code></td>
+<td>Importance-Performance Map Analysis (IPMA)</td>
+</tr>
+<tr class="odd">
+<td><code>assess_cipma()</code></td>
+<td>Combined IPMA with Necessary Condition Analysis</td>
+</tr>
+<tr class="even">
+<td><code>assess_coa()</code></td>
+<td>Composite Overfit Analysis (full pipeline)</td>
+</tr>
+<tr class="odd">
+<td><code>predictive_deviance()</code></td>
+<td>Compute predictive deviance scores</td>
+</tr>
+<tr class="even">
+<td><code>deviance_tree()</code></td>
+<td>Identify deviant case groups via decision tree</td>
+</tr>
+<tr class="odd">
+<td><code>unstable_params()</code></td>
+<td>Parameter instability analysis</td>
+</tr>
+<tr class="even">
+<td><code>group_rules()</code></td>
+<td>Extract decision rules for deviant groups</td>
+</tr>
+<tr class="odd">
+<td><code>competes()</code></td>
+<td>Show competing splits at tree nodes</td>
+</tr>
+<tr class="even">
+<td><code>assess_nca()</code></td>
+<td>Necessary Condition Analysis for PLS-SEM</td>
+</tr>
+<tr class="odd">
+<td><code>assess_nca_esse()</code></td>
+<td>NCA with Effect Size Sensitivity Extension</td>
+</tr>
+<tr class="even">
+<td><code>assess_cta()</code></td>
+<td>Confirmatory Tetrad Analysis (CTA-PLS)</td>
+</tr>
+<tr class="odd">
+<td><code>assess_fimix()</code></td>
+<td>FIMIX-PLS latent class segmentation</td>
+</tr>
+<tr class="even">
+<td><code>assess_fimix_compare()</code></td>
+<td>Compare FIMIX solutions across K values</td>
+</tr>
+<tr class="odd">
+<td><code>assess_pos()</code></td>
+<td>PLS-POS prediction-oriented segmentation</td>
+</tr>
+<tr class="even">
+<td><code>assess_pos_compare()</code></td>
+<td>Compare PLS-POS solutions across K values</td>
+</tr>
+<tr class="odd">
+<td><code>pos_segments()</code></td>
+<td>Extract segment-specific re-estimated PLS models</td>
+</tr>
+<tr class="even">
+<td><code>congruence_test()</code></td>
+<td>Bootstrapped congruence coefficient testing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="textbook-demos">Textbook demos</h2>
+<p>seminrExtras bundles the demo files for the <em>PLS-SEM using R</em> workbook (Hair
+et al., 2026). After loading the package, list and run them with <code>demo()</code>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/demo.html'>demo</a></span><span class='op'>(</span><span class='st'>"seminr-pls-cvpat"</span>, package <span class='op'>=</span> <span class='st'>"seminrExtras"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Available demos include method walkthroughs (<code>seminr-pls-cvpat</code>,
+<code>seminr-pls-pcm</code>, <code>seminr-pls-cipma</code>, <code>seminr-pls-coa</code>, <code>seminr-pls-nca</code>,
+<code>seminr-pls-fimix</code>, <code>seminr-pls-cta</code>, <code>seminr-pls-pos</code>,
+<code>seminr-pls-congruence</code>) and per-chapter primers
+(<code>seminr-primer-v2-chap2</code> through <code>seminr-primer-v2-chap8</code>).</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><strong>Source:</strong> <a href="https://github.com/sem-in-r/seminrExtras" class="uri">https://github.com/sem-in-r/seminrExtras</a></li>
+<li><strong>CRAN:</strong> <a href="https://cran.r-project.org/package=seminrExtras" class="uri">https://cran.r-project.org/package=seminrExtras</a></li>
+<li><strong>Issues:</strong> <a href="https://github.com/sem-in-r/seminrExtras/issues" class="uri">https://github.com/sem-in-r/seminrExtras/issues</a></li>
+</ul>
+<h2 id="references">References</h2>
+<p>Becker, J.-M., Richter, N. F., Ringle, C. M., &amp; Sarstedt, M. (2026). Must-have, or maybe not? A sensitivity-based extension to necessary condition analysis. <em>Journal of Business Research, 206</em>, 115920. <a href="https://doi.org/10.1016/j.jbusres.2025.115920" class="uri">https://doi.org/10.1016/j.jbusres.2025.115920</a></p>
+<p>Danks, N. P. (2021). The piggy in the middle: The role of mediators in PLS-SEM-based prediction. <em>ACM SIGMIS Database: The DATABASE for Advances in Information Systems, 52</em>(SI), 24–42. <a href="https://doi.org/10.1145/3505639.3505644" class="uri">https://doi.org/10.1145/3505639.3505644</a></p>
+<p>Danks, N. P., Ray, S., &amp; Shmueli, G. (2024). The composite overfit analysis framework: Assessing the out-of-sample generalizability of construct-based models using predictive deviance, deviance trees, and unstable paths. <em>Management Science, 70</em>(1), 647–669. <a href="https://doi.org/10.1287/mnsc.2023.4705" class="uri">https://doi.org/10.1287/mnsc.2023.4705</a></p>
+<p>Dul, J. (2016). Necessary condition analysis (NCA): Logic and methodology of “necessary but not sufficient” causality. <em>Organizational Research Methods, 19</em>(1), 10–52. <a href="https://doi.org/10.1177/1094428115584005" class="uri">https://doi.org/10.1177/1094428115584005</a></p>
+<p>Franke, G. R., Sarstedt, M., &amp; Danks, N. P. (2021). Assessing measure congruence in nomological networks. <em>Journal of Business Research, 130</em>, 318–334. <a href="https://doi.org/10.1016/j.jbusres.2021.03.003" class="uri">https://doi.org/10.1016/j.jbusres.2021.03.003</a></p>
+<p>Gudergan, S. P., Ringle, C. M., Wende, S., &amp; Will, A. (2008). Confirmatory tetrad analysis in PLS path modeling. <em>Journal of Business Research, 61</em>(12), 1238–1249. <a href="https://doi.org/10.1016/j.jbusres.2008.01.012" class="uri">https://doi.org/10.1016/j.jbusres.2008.01.012</a></p>
+<p>Hair, J. F., Hult, G. T. M., Ringle, C. M., Sarstedt, M., Danks, N. P., &amp; Ray, S. (2026). <em>Partial least squares structural equation modeling (PLS-SEM) using R: A workbook</em> (2nd ed.). Springer.</p>
+<p>Hauff, S., Richter, N. F., Sarstedt, M., &amp; Ringle, C. M. (2024). Importance and performance in PLS-SEM and NCA: Introducing the combined importance-performance map analysis (cIPMA). <em>Journal of Retailing and Consumer Services, 78</em>, 103723. <a href="https://doi.org/10.1016/j.jretconser.2024.103723" class="uri">https://doi.org/10.1016/j.jretconser.2024.103723</a></p>
+<p>Liengaard, B. D., Sharma, P. N., Hult, G. T. M., Jensen, M. B., Sarstedt, M., Hair, J. F., &amp; Ringle, C. M. (2021). Prediction: Coveted, yet forsaken? Introducing a cross-validated predictive ability test in partial least squares path modeling. <em>Decision Sciences, 52</em>(2), 362–392. <a href="https://doi.org/10.1111/deci.12445" class="uri">https://doi.org/10.1111/deci.12445</a></p>
+<p>Ringle, C. M., &amp; Sarstedt, M. (2016). Gain more insight from your PLS-SEM results: The importance-performance map analysis. <em>Industrial Management &amp; Data Systems, 116</em>(9), 1865–1886. <a href="https://doi.org/10.1108/IMDS-10-2015-0449" class="uri">https://doi.org/10.1108/IMDS-10-2015-0449</a></p>
+<p>Sharma, P. N., Liengaard, B. D., Hair, J. F., Sarstedt, M., &amp; Ringle, C. M. (2023). Predictive model assessment and selection in composite-based modeling using PLS-SEM: Extensions and guidelines for using CVPAT. <em>European Journal of Marketing, 57</em>(6), 1662–1677. <a href="https://doi.org/10.1108/EJM-08-2020-0636" class="uri">https://doi.org/10.1108/EJM-08-2020-0636</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

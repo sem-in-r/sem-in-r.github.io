@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>https://seminr.io/about.html</loc>
-    <lastmod>2026-02-23T19:48:35+08:00</lastmod>
+    <loc>https://seminr.io/CLAUDE.local.html</loc>
+    <lastmod>2026-07-09T14:33:45+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/community.html</loc>
+    <lastmod>2026-07-09T15:45:34+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/extras.html</loc>
+    <lastmod>2026-07-09T15:37:25+08:00</lastmod>
   </url>
   <url>
     <loc>https://seminr.io/</loc>
-    <lastmod>2021-05-26T15:54:27+08:00</lastmod>
+    <lastmod>2026-07-09T16:56:48+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/packages.html</loc>
+    <lastmod>2026-07-09T16:40:18+08:00</lastmod>
   </url>
   <url>
     <loc>https://seminr.io/posts.html</loc>
     <lastmod>2022-01-06T21:49:35+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts/2026-07-09-one-seminr-many-languages/</loc>
+    <lastmod>2026-07-09T16:45:41+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts/2026-05-25-seminr-250-released/</loc>
+    <lastmod>2026-07-09T15:52:05+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts/2026-04-21-introducing-seminrextras/</loc>
+    <lastmod>2026-07-09T15:53:29+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://seminr.io/posts/2026-02-21-seminr-242-on-cran/</loc>
+    <lastmod>2026-07-09T15:54:09+08:00</lastmod>
   </url>
   <url>
     <loc>https://seminr.io/posts/2022-01-05-seminr-23-brings-pls-mga/</loc>
