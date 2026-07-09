@@ -1,7 +1,6 @@
 ---
 name: build
 description: Render the Distill site. Use when asked to build, rebuild, or render the site.
-disable-model-invocation: true
 allowed-tools: Bash
 ---
 

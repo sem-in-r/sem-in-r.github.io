@@ -18,6 +18,8 @@ navbar:
       href: posts.html
     - text: "Extras"
       href: extras.html
+    - text: "Resources"
+      href: resources.html
     - text: "Community"
       href: community.html
 output:
