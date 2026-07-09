@@ -4,15 +4,20 @@ description: |
   SEMinR's Homepage and Blog
 output_dir: "_build/docs"
 base_url: https://seminr.io/
+favicon: images/favicon.png
 include: [".nojekyll"]
 navbar:
   logo:
-    image: images/logo.png
+    image: images/seminr-logo.png
     href: https://sem-in-r.github.io
   search: false
   right:
+    - text: "Packages"
+      href: packages.html
     - text: "Posts"
       href: posts.html
-    - text: "About"
-      href: about.html
+    - text: "Extras"
+      href: extras.html
+    - text: "Community"
+      href: community.html
 output: distill::distill_article

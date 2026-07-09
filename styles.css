@@ -1,0 +1,102 @@
+/* Inline language logos next to package headings */
+.lang-logo {
+  height: 1.1em;
+  width: auto;
+  vertical-align: -0.18em;
+  margin-right: 0.4em;
+}
+
+/* Don't repeat the logos inside the floating table of contents */
+#TOC .lang-logo {
+  display: none;
+}
+
+/* Homepage hero logo */
+.hero-logo {
+  display: block;
+  margin: 0.5em auto 1em;
+  max-width: 820px;
+  width: 92%;
+  height: auto;
+}
+
+/* Homepage status badges */
+.home-badges {
+  text-align: center;
+  margin: 0 0 1.5em;
+}
+
+.home-badges img {
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
+}
+
+/* Language-switcher tabs for the code example */
+.code-tabs {
+  margin: 1.5em 0;
+}
+
+.code-tabs-nav {
+  display: flex;
+  gap: 0.25em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+
+.code-tab {
+  appearance: none;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.code-tab:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.code-tab.active {
+  color: #2166ac;
+  border-bottom-color: #2166ac;
+}
+
+.code-panel {
+  display: none;
+}
+
+.code-panel.active {
+  display: block;
+}
+
+/* Homepage multi-language support note */
+.multilang-note {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  flex-wrap: wrap;
+  margin: 1.5em 0;
+  padding: 0.9em 1.1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.02);
+  font-size: 0.95em;
+}
+
+.multilang-note img {
+  height: 1.4em;
+  width: auto;
+  vertical-align: middle;
+}
+
+.multilang-note .multilang-logos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
