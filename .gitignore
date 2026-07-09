@@ -8,6 +8,12 @@
 _build
 
 # Claude Code local config (allow project instructions and skills/)
+CLAUDE.local.md
 .claude/*
 !.claude/CLAUDE.md
+!.claude/settings.json
 !.claude/skills/
+
+# Cross-machine sync manifests (e.g. Sideways)
+.swcopy
+.swsymlink
