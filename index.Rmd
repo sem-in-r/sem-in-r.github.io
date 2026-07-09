@@ -1,7 +1,6 @@
 ---
 title: "Welcome to SEMinR"
 site: distill::distill_website
-creative_commons: CC BY
 ---
 
 SEMinR allows users to easily create and modify structural equation models (SEM).  It allows estimation using either covariance-based SEM (CBSEM, such as LISREL/Lavaan), or Partial Least Squares Path Modeling (PLS-PM, such as SmartPLS/semPLS).
