@@ -1,0 +1,55 @@
+---
+title: "Introducing seminrExtras"
+description: |
+  seminrExtras 1.0.0 is now on CRAN — a companion package for SEMinR that brings the advanced PLS-SEM assessment toolkit (prediction, necessity, heterogeneity, measurement confirmation, and overfit diagnostics) into R.
+author:
+  - name: Nicholas Danks
+    url: https://nicholasdanks.com
+date: 04-21-2026
+preview: images/SEMinR-logo.jpg
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![SEMinR](images/SEMinR-logo.jpg)
+
+Introducing **seminrExtras** — now on CRAN at 1.0.0. 🎉 I've never properly announced this package to the community, so: here it is.
+
+**What it is.** seminrExtras is a companion package for `seminr` that ships the advanced PLS-SEM assessment methods that don't fit into the base seminr workflow — the things you usually end up writing custom scripts for, or reaching for another software package for. The goal is simple: if you already use SEMinR to estimate your PLS-SEM models, you should be able to stay in R for the full modern toolkit of prediction, necessity, heterogeneity, measurement confirmation, and overfit diagnostics.
+
+### What's in 1.0.0
+
+- 🔍 **Composite Overfit Analysis (COA)** — `assess_coa()` diagnoses why and for whom your PLS model fails to generalise out-of-sample. Predictive deviance + deviance trees + unstable paths in one call.
+- 📏 **Necessary Condition Analysis (NCA)** — `assess_nca()` with fully internal CE-FDH and CR-FDH ceiling lines. No external NCA dependency.
+- 🧪 **NCA-ESSE** — `assess_nca_esse()` implements the Effect Size Sensitivity Extension (Becker et al., 2026) — tests how robust your NCA conclusions are to extreme responses.
+- 🗺️ **Combined IPMA (cIPMA)** — `assess_cipma()` overlays NCA necessity onto the IPMA map. `assess_ipma()` for IPMA-only. Supports HOCs, mediation, and moderation.
+- 🧬 **FIMIX-PLS** — `assess_fimix()` and `assess_fimix_compare()`. EM-based latent-class segmentation with multi-start init and IC comparison across K.
+- 🎯 **PLS-POS** — `assess_pos()`, `assess_pos_compare()`, `pos_segments()`. Prediction-oriented segmentation that maximises ΣR² across segments (Becker et al., 2013) — no distributional assumptions.
+- 📐 **CTA-PLS** — `assess_cta()` for confirmatory tetrad analysis. Automatic indicator-borrowing for constructs with fewer than 4 indicators (Gudergan et al., 2008).
+- 🔗 **PCM (Predictive Contribution of the Mediator)** — `assess_pcm()` evaluates whether a mediator actually improves out-of-sample prediction (Danks, 2021). Auto-detects mediation paths.
+- ✅ **CVPAT + congruence testing** — `assess_cvpat()`, `assess_cvpat_compare()`, and `congruence_test()` round out the prediction and weight-stability toolkit.
+
+Every feature has `print()`, `summary()`, and `plot()` S3 methods, and a runnable `demo("seminr-pls-<feature>")`.
+
+### Get it
+
+```r
+install.packages("seminrExtras")
+library(seminrExtras)
+```
+
+Requires `seminr` ≥ 2.4.0.
+
+Source, docs, and issues: <https://github.com/sem-in-r/seminrExtras>
+
+If you hit something that doesn't work the way you expect, or want a method added — please open an issue at <https://github.com/sem-in-r/seminrExtras/issues>. That's the fastest way to get it on the roadmap, and it helps future users too.
+
+I've also put together a single runnable demo document that walks through every new feature end-to-end on the built-in corporate reputation and MOBI datasets: <https://gist.github.com/NicholasDanks/1dddab452c4fdbbce061a93d6a83aed1>
+
+Huge thanks to Soumya Ray and the SEMinR team, and to Christian Ringle, José Luis Roldán, and Marko Sarstedt for their support and guidance along the way.

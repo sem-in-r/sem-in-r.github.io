@@ -1,0 +1,137 @@
+---
+title: "One SEMinR, Many Languages"
+description: |
+  SEMinR is no longer R-only: experimental ports now bring the same toolkit to
+  other languages, starting with Python and JavaScript/TypeScript. Each port
+  mirrors the R API and is validated for numerical parity against the R package
+  using golden fixtures — so you can stay in the language your model analysis
+  lives in.
+author:
+  - name: Soumya Ray
+    url: https://soumyaray.com
+date: 07-09-2026
+preview: images/SEMinR-ports.png
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![SEMinR for R, Python, and JavaScript/TypeScript](images/SEMinR-ports.png)
+
+SEMinR began life as an R package, and R remains its authoritative home. But not
+everyone lives in R. So we're excited to share that SEMinR now has two
+**experimental** ports that bring the same PLS-SEM and covariance-based SEM
+toolkit to other ecosystems:
+
+- **[seminr for Python](https://github.com/sem-in-r/seminr-py)** — install with
+  `pip install seminr`. Requires Python 3.11+, with NumPy and SciPy as the only
+  runtime dependencies (optional pandas support for DataFrame input).
+- **[seminr for JavaScript & TypeScript](https://github.com/sem-in-r/seminr-ts)** —
+  install with `npm install @seminr/core`. Zero-dependency and runtime-agnostic:
+  it runs in Bun, Node, Deno, and the browser as plain JavaScript, with
+  first-class TypeScript types included for TS projects.
+
+Both ports cover the full non-plotting SEMinR surface: the specification DSL
+(composites, reflective/PLSc constructs, higher-order constructs, all three
+interaction methods, and quadratic terms), `estimate_pls` with bootstrapping,
+the assessment suite (reliability, HTMT, Fornell-Larcker, cross-loadings, VIFs,
+f², AIC/BIC), PLSpredict, PLS-MGA, and covariance-based CFA/CBSEM. The public
+API deliberately mirrors SEMinR's familiar names, so moving over is largely
+mechanical — R's `snake_case` becomes `camelCase` in the JavaScript/TypeScript
+port, and R's named arguments become named-argument objects.
+
+### The same analysis, across languages
+
+The measurement and structural model reads almost identically everywhere:
+
+**R**
+
+```r
+mm <- constructs(
+  composite("Image", multi_items("IMAG", 1:5)),
+  composite("Expectation", multi_items("CUEX", 1:3)),
+  composite("Satisfaction", multi_items("CUSA", 1:3))
+)
+model <- estimate_pls(mobi, mm, sm)
+```
+
+**Python**
+
+```python
+mm = constructs(
+    composite("Image", multi_items("IMAG", [1, 2, 3, 4, 5])),
+    composite("Expectation", multi_items("CUEX", [1, 2, 3])),
+    composite("Satisfaction", multi_items("CUSA", [1, 2, 3])),
+)
+model = estimate_pls(mobi, mm, sm)
+```
+
+**JavaScript / TypeScript**
+
+```ts
+const mm = constructs(
+  composite("Image", multiItems("IMAG", [1, 2, 3, 4, 5])),
+  composite("Expectation", multiItems("CUEX", [1, 2, 3])),
+  composite("Satisfaction", multiItems("CUSA", [1, 2, 3])),
+);
+const model = estimatePls({ data, measurementModel: mm, structuralModel: sm });
+```
+
+### How we know the ports agree: golden fixtures
+
+A port is only useful if you can trust its numbers. Rewriting an estimator in a
+new language is exactly the kind of work where subtle discrepancies creep in — a
+different matrix library, a different convergence criterion, a different way of
+handling an edge case. So rather than judge the ports by eye, we hold them to
+the R package as ground truth using **golden fixtures**.
+
+The idea is simple. A script runs the R SEMinR package on the bundled `mobi` /
+ECSI dataset and serializes the results — path coefficients, weights, loadings,
+reliability tables, HTMT, f², predictions, and more — into JSON files. Those
+files are committed into each port's repository as the **test contract**. The
+port's own test suite then re-runs the same models and asserts, cell by cell,
+that its output matches the R-generated fixtures.
+
+A few details that make this a strong guarantee:
+
+- **R is the single source of truth.** Fixtures are generated *from* the R
+  implementation (`Rscript scripts/generate-fixtures.R`), not written by hand.
+  When SEMinR's behavior is the reference, there's no room to "define correct"
+  as whatever the port happens to produce.
+- **Tight, quantity-appropriate tolerances.** PLS quantities must match R to
+  within `1e-5`. Covariance-based estimation — which the ports reimplement from
+  scratch to match lavaan's ML/MLR estimator, rather than calling lavaan — uses
+  tiered tolerances appropriate to each fit measure.
+- **Bootstrapping is checked deterministically.** Random resampling can't be
+  compared naively across languages, so the fixtures include R's exact resample
+  index matrix. The ports feed those same indices in, which lets us verify the
+  bootstrap machinery itself rather than the RNG.
+- **Parity is the acceptance bar for every feature.** A capability isn't
+  considered "done" in a port until it matches the fixtures — the same standard
+  applies to the Python and TypeScript versions alike, and the two ports even
+  share fixtures and algorithm digests with each other.
+
+### A word of caution
+
+These ports are **experimental**. The R package remains the authoritative
+implementation, and we recommend validating results against it before relying on
+a port for published work. seminr-ts in particular is still pre-1.0, so its API
+may shift between minor versions.
+
+That said, the fixtures give us — and you — a concrete, continuously-checked
+basis for trusting the numbers. If you already use SEMinR to estimate your
+models, you can now stay in Python or JavaScript/TypeScript for the full modern
+toolkit of estimation, assessment, prediction, and multi-group analysis.
+
+Try them out, and please tell us how it goes:
+
+- Python — <https://github.com/sem-in-r/seminr-py> ([PyPI](https://pypi.org/project/seminr/))
+- JavaScript / TypeScript — <https://github.com/sem-in-r/seminr-ts> ([npm](https://www.npmjs.com/package/@seminr/core))
+
+Bug reports and feature requests on either repository are the fastest way to
+help us mature these ports.
