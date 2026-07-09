@@ -5,6 +5,11 @@ description: |
 output_dir: "_build/docs"
 base_url: https://seminr.io/
 favicon: images/seminr_logos/favicon.png
+# `theme:` applies site-wide INCLUDING blog posts (unlike the `css:` under
+# output below, which only reaches top-level pages). Both point at the same
+# stylesheet so the navbar centering and widened layout are consistent on every
+# page. See CLAUDE.md / the multilang post for why posts don't inherit `css:`.
+theme: styles.css
 include: [".nojekyll", "CNAME"]
 navbar:
   logo:
