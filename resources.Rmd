@@ -44,6 +44,19 @@ your results — a natural companion to the workbook above.
 - [Watch the SEMinR Lecture Series on YouTube](https://www.youtube.com/playlist?list=PLb7vm6tsQ3Ks0TyMWw3EUlgoMr06_7U8S)
 :::
 
+### Quick Theming Tutorial (video) {.resource-title}
+
+::: {.book-entry}
+<a href="https://www.youtube.com/watch?v=epTFlfT9SGg" class="video-thumb" target="_blank" rel="noopener" aria-label="Watch the SEMinR Quick Theming Tutorial on YouTube"><img src="images/resources/seminr-theming-tutorial-thumb.jpg" alt="SEMinR Quick Theming Tutorial on YouTube"/></a>
+
+A short walkthrough from one of the SEMinR package authors showing how to
+restyle your model diagrams — colours, node and edge styling, and labels —
+using SEMinR's theming tools and the interactive Theme Builder, so your plots
+match your paper or presentation.
+
+- [Watch the Quick Theming Tutorial on YouTube](https://www.youtube.com/watch?v=epTFlfT9SGg)
+:::
+
 # Ask questions
 
 ::: {.book-entry}
