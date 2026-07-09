@@ -63,7 +63,7 @@ Each post lives in `_posts/YYYY-MM-DD-slug-title/` containing:
 - `images/` — Post-specific images (including thumbnail referenced by `preview:` in frontmatter)
 - Generated `_files/` directory and `.html` output from knitting
 
-**Default post image:** When a post has no image of its own, use the **regular (landscape) SEMinR logo** (`images/SEMinR_logo.jpg`), not the square logo (`images/logo.png`).
+**Default post image:** When a post has no image of its own, use the **landscape SEMinR wordmark** (`images/seminr_logos/seminr-logo.png`), not the square logo (`images/seminr_logos/logo.png`).
 
 ## Deployment
 

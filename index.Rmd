@@ -13,7 +13,7 @@ output:
 d-byline { display: none; }
 </style>
 
-<img src="images/seminr-hero.png" alt="SEMinR" class="hero-logo">
+<img src="images/seminr_logos/seminr-hero.png" alt="SEMinR" class="hero-logo">
 
 <div class="home-badges">
   <a href="https://cran.r-project.org/package=seminr"><img src="https://www.r-pkg.org/badges/version/seminr" alt="CRAN version"></a>
