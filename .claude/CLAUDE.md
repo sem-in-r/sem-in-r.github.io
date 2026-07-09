@@ -35,14 +35,15 @@ install.packages('distill')
 rmarkdown::render_site()
 ```
 
-**Create a new blog post (R console):**
-```r
-distill::create_post("Title of your post")
-```
+**Create a new blog post:** Follow the instructions in the **"Creating New Blog Posts"** section of `README.md`. (The basic mechanism is `distill::create_post("Title of your post")` in the R console, but the README is authoritative — use it.)
 
 **Knit a single post:** Open the post's `.Rmd` file and knit it. Distill caches rendered posts and won't re-render them during a full site build.
 
 Output goes to `_build/docs/` (gitignored).
+
+**Preview live-reloads:** If the local `/preview` server is already running, it
+live-updates whenever the site is rebuilt. After editing, just rebuild — do not
+re-run `/preview`.
 
 **Important:** Any `.md` or `.Rmd` file in the project root (outside of dotfolders like `.claude/` or underscore-prefixed dirs like `_posts/`) will be rendered into HTML by `rmarkdown::render_site()`. Keep non-site markdown files inside dotfolders to avoid unwanted build output.
 
@@ -61,6 +62,8 @@ Each post lives in `_posts/YYYY-MM-DD-slug-title/` containing:
 - `slug-title.Rmd` — Post source with YAML frontmatter (title, description, author, date, preview image)
 - `images/` — Post-specific images (including thumbnail referenced by `preview:` in frontmatter)
 - Generated `_files/` directory and `.html` output from knitting
+
+**Default post image:** When a post has no image of its own, use the **regular (landscape) SEMinR logo** (`images/SEMinR_logo.jpg`), not the square logo (`images/logo.png`).
 
 ## Deployment
 
