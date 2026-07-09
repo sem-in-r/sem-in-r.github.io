@@ -6,6 +6,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is the website for the [SEMinR](https://seminr.io/) R package, built with [Distill for R Markdown](https://rstudio.github.io/distill/). It produces a static site deployed via GitHub Pages.
 
+## Related Repositories
+
+This website documents SEMinR and may reflect or refer to elements (API, syntax,
+features, examples) from the SEMinR source repositories, which are sibling
+directories of this one:
+
+| Repo | Path (relative to this site root) | Role |
+|------|-----------------------------------|------|
+| **`seminr`** | `../seminr` | The **base** implementation — the original R package |
+| **`seminr-py`** | `../seminr-py` | Python port of SEMinR |
+| **`seminr-ts`** | `../seminr-ts` | TypeScript port of SEMinR |
+
+The R version (`../seminr`) is authoritative; `seminr-py` and `seminr-ts` are
+ports to other languages. When site content describes SEMinR's behavior, syntax,
+or features, cross-check against these repos (starting with the R base) rather
+than assuming.
+
 ## Build Commands
 
 **Install dependencies (R console):**
@@ -57,6 +74,7 @@ The following skills are available and should be suggested when appropriate:
 |-------|-----------------|
 | `/build` | User asks to build, render, or rebuild the site |
 | `/publish` | User asks to publish, deploy, or push the built site to GitHub Pages |
+| `/preview` | User asks to preview the built site or view changes in the browser |
 
 **When the user asks to "commit", "push", or "commit and push":** this almost always refers to the **`main`** branch (source files). If the context suggests the user may want to publish the rendered site instead (e.g., they just ran `/build`, or they mention the live site), **ask whether they meant to use `/publish`** before proceeding.
 
