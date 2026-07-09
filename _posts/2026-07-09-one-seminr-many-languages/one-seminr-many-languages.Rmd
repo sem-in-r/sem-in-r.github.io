@@ -47,40 +47,142 @@ port, and R's named arguments become named-argument objects.
 
 ### The same analysis, across languages
 
-The measurement and structural model reads almost identically everywhere:
+Talk is cheap, so here is a *complete* PLS-SEM analysis — measurement model,
+structural model, and estimation — written in each language. **Click the tabs
+below** to switch between R, Python, and TypeScript and see for yourself how
+little changes: the same constructs, the same paths, the same estimator. Only
+each language's natural conventions differ — R's `snake_case` becomes
+`camelCase` in TypeScript, and named arguments become keyword or object
+arguments.
 
-**R**
+<style>
+/* Language-switcher tabs (mirrors the homepage; posts don't load styles.css) */
+.code-tabs { margin: 1.5em 0; }
+.code-tabs-nav {
+  display: flex;
+  gap: 0.25em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+.code-tab {
+  appearance: none;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+.code-tab:hover { color: rgba(0, 0, 0, 0.8); }
+.code-tab.active { color: #2166ac; border-bottom-color: #2166ac; }
+.code-panel { display: none; }
+.code-panel.active { display: block; }
+</style>
 
+:::: {.code-tabs}
+<div class="code-tabs-nav" role="tablist">
+<button class="code-tab active" data-lang="r" type="button">R</button>
+<button class="code-tab" data-lang="python" type="button">Python</button>
+<button class="code-tab" data-lang="typescript" type="button">TypeScript</button>
+</div>
+
+::: {.code-panel .active data-lang="r"}
 ```r
-mm <- constructs(
-  composite("Image", multi_items("IMAG", 1:5)),
+# Measurement model — how each construct is measured
+measurements <- constructs(
+  reflective("Image",      multi_items("IMAG", 1:5)),
   composite("Expectation", multi_items("CUEX", 1:3)),
-  composite("Satisfaction", multi_items("CUSA", 1:3))
+  composite("Loyalty",     multi_items("CUSL", 1:3), weights = mode_B),
+  composite("Complaints",  single_item("CUSCO"))
 )
-model <- estimate_pls(mobi, mm, sm)
+
+# Structural model — how the constructs relate
+structure <- relationships(
+  paths(from = c("Image", "Expectation"), to = c("Complaints", "Loyalty"))
+)
+
+# Estimate with PLS, then inspect the results
+model <- estimate_pls(data = mobi, measurements, structure)
+summary(model)
 ```
+:::
 
-**Python**
-
+::: {.code-panel data-lang="python"}
 ```python
-mm = constructs(
-    composite("Image", multi_items("IMAG", [1, 2, 3, 4, 5])),
-    composite("Expectation", multi_items("CUEX", [1, 2, 3])),
-    composite("Satisfaction", multi_items("CUSA", [1, 2, 3])),
+from seminr import (
+    constructs, reflective, composite, multi_items, single_item, mode_B,
+    relationships, paths, estimate_pls, summarize,
 )
-model = estimate_pls(mobi, mm, sm)
+from seminr.datasets import load_mobi
+
+mobi = load_mobi()
+
+# Measurement model — how each construct is measured
+measurements = constructs(
+    reflective("Image",      multi_items("IMAG", [1, 2, 3, 4, 5])),
+    composite("Expectation", multi_items("CUEX", [1, 2, 3])),
+    composite("Loyalty",     multi_items("CUSL", [1, 2, 3]), weights=mode_B),
+    composite("Complaints",  single_item("CUSCO")),
+)
+
+# Structural model — how the constructs relate
+structure = relationships(
+    paths(["Image", "Expectation"], ["Complaints", "Loyalty"]),
+)
+
+# Estimate with PLS, then inspect the results
+model = estimate_pls(mobi, measurements, structure)
+summarize(model)
 ```
+:::
 
-**JavaScript / TypeScript**
+::: {.code-panel data-lang="typescript"}
+```typescript
+import {
+  parseCsv, constructs, reflective, composite, multiItems, singleItem, modeB,
+  relationships, paths, estimatePls, summarize,
+} from "@seminr/core";
 
-```ts
-const mm = constructs(
-  composite("Image", multiItems("IMAG", [1, 2, 3, 4, 5])),
+// Load your data — any source of CSV text works
+const mobi = parseCsv(await Bun.file("mobi.csv").text());
+
+// Measurement model — how each construct is measured
+const measurements = constructs(
+  reflective("Image",      multiItems("IMAG", [1, 2, 3, 4, 5])),
   composite("Expectation", multiItems("CUEX", [1, 2, 3])),
-  composite("Satisfaction", multiItems("CUSA", [1, 2, 3])),
+  composite("Loyalty",     multiItems("CUSL", [1, 2, 3]), modeB),
+  composite("Complaints",  singleItem("CUSCO")),
 );
-const model = estimatePls({ data, measurementModel: mm, structuralModel: sm });
+
+// Structural model — how the constructs relate
+const structure = relationships(
+  paths(["Image", "Expectation"], ["Complaints", "Loyalty"]),
+);
+
+// Estimate with PLS, then inspect the results
+const model = estimatePls(mobi, measurements, structure);
+summarize(model);
 ```
+:::
+::::
+
+<script>
+document.querySelectorAll('.code-tabs').forEach(function (tabs) {
+  var buttons = tabs.querySelectorAll('.code-tab');
+  var panels = tabs.querySelectorAll('.code-panel');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var lang = button.getAttribute('data-lang');
+      buttons.forEach(function (b) { b.classList.toggle('active', b === button); });
+      panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-lang') === lang); });
+    });
+  });
+});
+</script>
 
 ### How we know the ports agree: golden fixtures
 
