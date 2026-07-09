@@ -14,7 +14,7 @@ navbar:
   right:
     - text: "Packages"
       href: packages.html
-    - text: "Posts"
+    - text: "News"
       href: posts.html
     - text: "Extras"
       href: extras.html
