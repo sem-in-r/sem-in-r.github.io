@@ -70,6 +70,25 @@
     "input_file": {}
   },
   {
+    "path": "posts/2023-02-28-composite-overfit-analysis-framework-published/",
+    "title": "The Composite Overfit Analysis Framework is Published in Management Science",
+    "description": "Nicholas Danks' article — the bulk of his dissertation work — introducing the Composite Overfit Analysis (COA) Framework for assessing the out-of-sample generalizability of construct-based models is now published in Management Science.",
+    "author": [
+      {
+        "name": "Nicholas Danks",
+        "url": "https://nicholasdanks.com/"
+      }
+    ],
+    "date": "2023-02-28",
+    "categories": [],
+    "contents": "\nThe Composite Overfit Analysis Framework, published in Management Science.After years of hard work, and unending support and guidance from my mentors Soumya Ray and Galit Shmueli, I am very pleased to announce that my article — and the bulk of my dissertation work — is now published.\nIt is titled “The Composite Overfit Analysis Framework: Assessing the Out-of-Sample Generalizability of Construct-Based Models Using Predictive Deviance, Deviance Trees, and Unstable Paths” by Nicholas P. Danks, Soumya Ray, and Galit Shmueli, in Management Science.\nThe article is available online, or you can request a copy by finding my profile on ResearchGate.\n\n\n\n",
+    "preview": "posts/2023-02-28-composite-overfit-analysis-framework-published/images/coa-management-science.png",
+    "last_modified": "2026-07-09T18:49:01+08:00",
+    "input_file": {},
+    "preview_width": 814,
+    "preview_height": 293
+  },
+  {
     "path": "posts/2022-01-05-seminr-23-brings-pls-mga/",
     "title": "SEMinR 2.3 Brings PLS-MGA",
     "description": "SEMinR v2.3 is available for installation from CRAN, and it brings the most requested feature from our users: PLS-MGA.",

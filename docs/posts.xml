@@ -54,6 +54,15 @@ lives in.</description>
       <media:content url="https://seminr.io/posts/2026-02-21-seminr-242-on-cran/images/SEMinR-logo.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
+      <title>The Composite Overfit Analysis Framework is Published in Management Science</title>
+      <dc:creator>Nicholas Danks</dc:creator>
+      <link>https://seminr.io/posts/2023-02-28-composite-overfit-analysis-framework-published</link>
+      <description>Nicholas Danks' article — the bulk of his dissertation work — introducing the Composite Overfit Analysis (COA) Framework for assessing the out-of-sample generalizability of construct-based models is now published in Management Science.</description>
+      <guid>https://seminr.io/posts/2023-02-28-composite-overfit-analysis-framework-published</guid>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://seminr.io/posts/2023-02-28-composite-overfit-analysis-framework-published/images/coa-management-science.png" medium="image" type="image/png" width="814" height="293"/>
+    </item>
+    <item>
       <title>SEMinR 2.3 Brings PLS-MGA</title>
       <dc:creator>Soumya Ray</dc:creator>
       <link>https://seminr.io/posts/2022-01-05-seminr-23-brings-pls-mga</link>
