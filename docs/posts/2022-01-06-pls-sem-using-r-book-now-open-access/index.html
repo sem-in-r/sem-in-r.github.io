@@ -20,6 +20,7 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -50,16 +51,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,17 +75,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>SEMinR: Our Free to Download Book, PLS-SEM Using R, is a Huge Hit!</title>
@@ -129,7 +132,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/978-3-030-80519-7.jpg","pls-sem-using-r-book-now-open-access_files/anchor-4.2.2/anchor.min.js","pls-sem-using-r-book-now-open-access_files/bowser-1.9.3/bowser.min.js","pls-sem-using-r-book-now-open-access_files/distill-2.2.21/template.v2.js","pls-sem-using-r-book-now-open-access_files/header-attrs-2.8/header-attrs.js","pls-sem-using-r-book-now-open-access_files/jquery-1.11.3/jquery.min.js","pls-sem-using-r-book-now-open-access_files/popper-2.6.0/popper.min.js","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy-bundle.umd.min.js","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy-light-border.css","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy.css","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy.umd.min.js","pls-sem-using-r-book-now-open-access_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/978-3-030-80519-7.jpg","pls-sem-using-r-book-now-open-access_files/anchor-4.2.2/anchor.min.js","pls-sem-using-r-book-now-open-access_files/bowser-1.9.3/bowser.min.js","pls-sem-using-r-book-now-open-access_files/distill-2.2.21/template.v2.js","pls-sem-using-r-book-now-open-access_files/header-attrs-2.31/header-attrs.js","pls-sem-using-r-book-now-open-access_files/header-attrs-2.8/header-attrs.js","pls-sem-using-r-book-now-open-access_files/jquery-1.11.3/jquery.min.js","pls-sem-using-r-book-now-open-access_files/jquery-3.6.0/jquery-3.6.0.js","pls-sem-using-r-book-now-open-access_files/jquery-3.6.0/jquery-3.6.0.min.js","pls-sem-using-r-book-now-open-access_files/jquery-3.6.0/jquery-3.6.0.min.map","pls-sem-using-r-book-now-open-access_files/popper-2.6.0/popper.min.js","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy-bundle.umd.min.js","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy-light-border.css","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy.css","pls-sem-using-r-book-now-open-access_files/tippy-6.2.7/tippy.umd.min.js","pls-sem-using-r-book-now-open-access_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -1858,8 +1861,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.8/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.31/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1992,6 +1995,122 @@ document.addEventListener('DOMContentLoaded', function() {
   vertical-align: middle;
 }
 
+/* Resources page: book entry — float the cover so the description text wraps
+   beside it. The wrapper is a single Distill grid item, so the float applies
+   to the block flow of the text inside it (a bare float on the image would not
+   wrap sibling paragraphs, which are separate grid items). */
+.book-entry {
+  overflow: hidden; /* contain the float so the section boundary is clean */
+}
+
+.book-entry .book-cover {
+  float: right;
+  width: 180px;
+  max-width: 40%;
+  margin: 0.25rem 0 1rem 1.5rem;
+}
+
+/* On narrow screens, stack the cover above the text and center it. */
+@media (max-width: 600px) {
+  .book-entry .book-cover {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
+
+/* Resources page: resource entry titles (book, video course). Larger than
+   bold body text so they read as headings, but lighter than the section
+   headings above them. Kept out of the floating TOC (toc_depth is 1). */
+.resource-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.75rem 0 0.75rem;
+}
+
+/* Video-course thumbnail: floats beside the description like the book cover,
+   with a YouTube-style play badge overlaid. The whole thumbnail is a link. */
+.video-thumb {
+  float: right;
+  position: relative;
+  display: block;
+  width: 280px;
+  max-width: 45%;
+  margin: 0.25rem 0 1rem 1.5rem;
+}
+
+.video-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Rounded rectangle behind the play triangle; reddens on hover/focus. */
+.video-thumb::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 44px;
+  background: rgba(23, 23, 23, 0.8);
+  border-radius: 12px;
+  transition: background 0.15s ease-in-out;
+}
+
+/* White play triangle, nudged slightly right so it looks optically centered. */
+.video-thumb::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 17px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-thumb:hover::before,
+.video-thumb:focus::before {
+  background: #ff0000;
+}
+
+@media (max-width: 600px) {
+  .video-thumb {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem;
+  }
+}
+
+/* Ask questions: Facebook group badge — the brand logo floated beside the text,
+   like the book cover and video thumbnail above. The whole badge is a link. */
+.fb-badge {
+  float: right;
+  display: block;
+  width: 120px;
+  max-width: 30%;
+  margin: 0.25rem 0 1rem 1.5rem;
+}
+
+.fb-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .fb-badge {
+    float: none;
+    width: 96px;
+    margin: 0 0 1rem;
+  }
+}
+
 </style>
 <!--/radix_placeholder_site_in_header-->
 
@@ -2020,6 +2139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <a href="../../packages.html">Packages</a>
 <a href="../../posts.html">News</a>
 <a href="../../extras.html">Extras</a>
+<a href="../../resources.html">Resources</a>
 <a href="../../community.html">Community</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
@@ -2031,6 +2151,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Our Free to Download Book, PLS-SEM Using R, is a Huge Hit!</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>Our textbook for PLS-SEM Using R has now reached over 45,000 downloads. The book is completely open-access and is accompanied by SEMinR which is free to download.</p></p>
@@ -2044,9 +2165,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-article">
 <figure>
-<img src="images/978-3-030-80519-7.jpg" style="width:50.0%" alt="PLS-SEM Using R" /><figcaption aria-hidden="true">PLS-SEM Using R</figcaption>
+<img src="images/978-3-030-80519-7.jpg" style="width:30.0%" alt="PLS-SEM Using R" />
+<figcaption aria-hidden="true">PLS-SEM Using R</figcaption>
 </figure>
-<p>Our textbook for PLS-SEM Using R has now reached over 45,000 downloads. Congratulations team! Marko Sarstedt, Christian M. Ringle, Joe Hair, Tomas Hult, Soumya Ray. Onwards and upwards!</p>
+<p>Our textbook for PLS-SEM Using R has now reached over 45,000 downloads. Congratulations team! Joe Hair, Tomas Hult, Christian M. Ringle, Marko Sarstedt, Nicholas Danks, Soumya Ray. Onwards and upwards!</p>
 <p><a href="https://link.springer.com/book/10.1007/978-3-030-80519-7">The book is completely open-access</a> and is accompanied by SEMinR which is free to download. I encourage you to take a look!</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
