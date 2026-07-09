@@ -5,7 +5,7 @@ description: |
 output_dir: "_build/docs"
 base_url: https://seminr.io/
 favicon: images/seminr_logos/favicon.png
-include: [".nojekyll"]
+include: [".nojekyll", "CNAME"]
 navbar:
   logo:
     image: images/seminr_logos/seminr-logo-white.png
