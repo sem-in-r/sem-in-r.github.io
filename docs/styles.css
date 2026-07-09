@@ -235,3 +235,43 @@
     margin: 0 0 1rem;
   }
 }
+
+/* Posts listing: the PLS-SEM book cover is a tall portrait image, so at the
+   default thumbnail width it renders much larger than the landscape wordmark
+   thumbnails on the other posts. Cap its width on the listing page so it sits
+   at a comparable visual size. Scoped to that one post via its link href. */
+.posts-list .post-preview[href*="pls-sem-using-r-book"] .thumbnail img {
+  width: auto;
+  max-width: 120px;
+}
+
+/* Post pages: a compact "Author · Date" line placed directly under the title.
+   The line is inserted at load time by _includes/byline-under-title.html (a
+   site-wide after_body include), which also hides Distill's default byline
+   band and its separator rules. This rule only styles that inserted line; if
+   the script fails, the page falls back to Distill's standard byline. */
+.post-byline {
+  margin: 0.4rem 0 0;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Post pages only (body.distill-post is set by the include above): remove the
+   large vertical gap Distill leaves between the description and the opening
+   image — the article's top padding, the leading figure/paragraph's top
+   margin, and the title block's trailing space. Top-level pages are unaffected
+   since they carry no author/date byline and never get the class. */
+.distill-post d-article {
+  padding-top: 0;
+}
+.distill-post d-article > figure:first-of-type,
+.distill-post d-article > p:first-of-type {
+  margin-top: 0;
+}
+.distill-post d-title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.distill-post d-title p:last-of-type {
+  margin-bottom: 0;
+}

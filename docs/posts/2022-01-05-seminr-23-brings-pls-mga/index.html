@@ -2112,6 +2112,46 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 
+/* Posts listing: the PLS-SEM book cover is a tall portrait image, so at the
+   default thumbnail width it renders much larger than the landscape wordmark
+   thumbnails on the other posts. Cap its width on the listing page so it sits
+   at a comparable visual size. Scoped to that one post via its link href. */
+.posts-list .post-preview[href*="pls-sem-using-r-book"] .thumbnail img {
+  width: auto;
+  max-width: 120px;
+}
+
+/* Post pages: a compact "Author · Date" line placed directly under the title.
+   The line is inserted at load time by _includes/byline-under-title.html (a
+   site-wide after_body include), which also hides Distill's default byline
+   band and its separator rules. This rule only styles that inserted line; if
+   the script fails, the page falls back to Distill's standard byline. */
+.post-byline {
+  margin: 0.4rem 0 0;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Post pages only (body.distill-post is set by the include above): remove the
+   large vertical gap Distill leaves between the description and the opening
+   image — the article's top padding, the leading figure/paragraph's top
+   margin, and the title block's trailing space. Top-level pages are unaffected
+   since they carry no author/date byline and never get the class. */
+.distill-post d-article {
+  padding-top: 0;
+}
+.distill-post d-article > figure:first-of-type,
+.distill-post d-article > p:first-of-type {
+  margin-top: 0;
+}
+.distill-post d-title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.distill-post d-title p:last-of-type {
+  margin-bottom: 0;
+}
+
 </style>
 <!--/radix_placeholder_site_in_header-->
 
@@ -2179,6 +2219,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!--radix_placeholder_site_after_body-->
+<script type="text/javascript">
+/* Site-wide byline layout (referenced from _site.yml as an after_body include).
+
+   Distill renders its byline (Author / Published / Citation) as a band below
+   the post description, built by Distill's own JS at load time. Rather than
+   fight that layout, we wait for the page to finish loading, lift the author(s)
+   and date into a single compact line placed directly under the title, and
+   hide the original byline and its separator rules.
+
+   Scoped naturally to post pages: <d-byline> only exists on articles. If
+   anything here fails, the page simply keeps Distill's default byline. */
+window.addEventListener('load', function () {
+  var byline = document.querySelector('d-byline');
+  var h1 = document.querySelector('d-title h1') || document.querySelector('h1');
+  if (!byline || !h1 || document.querySelector('.post-byline')) return;
+
+  // Collect every author name (a post may have more than one). Require at least
+  // one author: this is what distinguishes a blog post from a top-level page
+  // (packages, extras, resources, ...), which carries an empty byline. Without
+  // this gate, Distill's "Not published yet." placeholder on those pages would
+  // be treated as a post date.
+  var names = [].slice.call(byline.querySelectorAll('.author a.name, .author .name'))
+    .map(function (n) { return n.textContent.trim(); })
+    .filter(Boolean);
+  if (!names.length) return;
+
+  // Find the published date by its field label, so a DOI/Citation column can't
+  // shift a positional index onto the wrong value. Ignore Distill's
+  // "Not published yet." placeholder shown when no date is set.
+  var date = '';
+  [].slice.call(byline.querySelectorAll('.byline > div')).forEach(function (d) {
+    var label = d.querySelector('h3');
+    if (label && /published/i.test(label.textContent)) {
+      var p = d.querySelector('p');
+      if (p) date = p.textContent.trim();
+    }
+  });
+  if (/not published yet/i.test(date)) date = '';
+
+  var parts = [];
+  if (names.length) parts.push(names.join(', '));
+  if (date) parts.push(date);
+
+  var line = document.createElement('p');
+  line.className = 'post-byline';
+  line.textContent = parts.join('  ·  ');   // middot separator
+  h1.insertAdjacentElement('afterend', line);
+
+  // Mark this as a post page so post-only styling (e.g. the tightened gap
+  // between the description and the opening image) can scope to it without
+  // affecting top-level pages, which have no author/date byline.
+  document.body.classList.add('distill-post');
+
+  byline.style.display = 'none';
+  [].slice.call(document.querySelectorAll('hr.section-separator')).forEach(function (hr) {
+    hr.style.display = 'none';
+  });
+});
+</script>
+
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom">
