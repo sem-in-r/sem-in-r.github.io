@@ -101,6 +101,16 @@
   gap: 0.5em;
 }
 
+/* Repair Distill 1.6's malformed `.d-contents nav a` rule: its template ships a
+   missing semicolon after `text-decoration: none`, which makes the CSS parser
+   swallow the following `color` declaration and drop both. This restores the
+   intended table-of-contents link styling (no underline, muted gray). The bug
+   is still present in Distill's dev source, so an update won't fix it. */
+.d-contents nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
 /* Constrain the header's inner nav to a centered band so the logo and links
    don't drift to the extreme edges on widescreen monitors. The background bar
    (the outer <header>) still spans full width; only the logo/links row — the
