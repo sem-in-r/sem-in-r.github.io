@@ -1,0 +1,54 @@
+project:
+  type: website
+  # GitHub Pages serves _build/docs/ — a separate git checkout on the `build`
+  # branch. Pointing Quarto's output here drives the whole deploy flow: /publish,
+  # the build branch, GitHub Pages, and the custom domain.
+  output-dir: _build/docs
+  # Render only the site's own pages + posts. This deliberately EXCLUDES root
+  # markdown that is NOT site content — README.md, and the private, gitignored
+  # CLAUDE.local.md — so neither leaks into the build as a stray .html page.
+  render:
+    - "*.qmd"
+    - "posts/"
+
+# Copied verbatim into the output root:
+#   CNAME     — the custom domain (seminr.io) for GitHub Pages
+#   .nojekyll — tells GitHub Pages to serve the files as-is (no Jekyll)
+resources:
+  - CNAME
+  - .nojekyll
+
+website:
+  title: "SEMinR"
+  description: "SEMinR's Homepage and Blog"
+  site-url: https://seminr.io
+  favicon: images/seminr_logos/favicon.png
+  search: false            # the white wordmark is the brand; no search box
+  navbar:
+    logo: images/seminr_logos/seminr-logo-white.png
+    title: false           # hide the redundant "SEMinR" text — the logo IS the wordmark
+    right:
+      - text: "Packages"
+        href: packages.html
+      - text: "News"
+        href: posts.html
+      - text: "Extras"
+        href: extras.html
+      - text: "Resources"
+        href: resources.html
+      - text: "Community"
+        href: community.html
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    toc: true
+    toc-location: right
+
+# Cache computational output. Our posts are all static prose + fenced code (no
+# executed chunks), so this is a defensive no-op today — but it means adding a
+# future post with live R/Python code won't force a re-run on every build.
+execute:
+  freeze: auto

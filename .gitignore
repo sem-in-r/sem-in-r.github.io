@@ -4,8 +4,13 @@
 .RData
 .Ruserdata
 
-# Generated _site/ folder is in main branch
+# Rendered output — a separate git checkout on the `build` branch, served by
+# GitHub Pages. Quarto writes here via `output-dir: _build/docs` in _quarto.yml.
 _build
+
+# Quarto build artifacts
+/.quarto/
+/_freeze/
 
 # Claude Code local config (allow project instructions and skills/)
 CLAUDE.local.md
@@ -17,3 +22,5 @@ CLAUDE.local.md
 # Cross-machine sync manifests (e.g. Sideways)
 .swcopy
 .swsymlink
+
+**/*.quarto_ipynb
