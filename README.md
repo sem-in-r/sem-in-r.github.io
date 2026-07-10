@@ -1,64 +1,95 @@
 # SEMinR Website Repository
 
-This is the repository for the SEMinR wesbite, intended for SEMinR authors, maintainters, and collaborators to design and maintain the SEMinR Wesbite.
+This is the repository for the SEMinR website, intended for SEMinR authors, maintainers, and collaborators to design and maintain the SEMinR website. The site is built with [Quarto](https://quarto.org) and deployed via GitHub Pages.
 
 ## Setup
 
-**Clone this repo:** Get the website repo from Github.
+**Clone this repo:** Get the website repo from GitHub.
 
 ```shell
 git clone git@github.com:sem-in-r/sem-in-r.github.io.git
 ```
 
-**Create an empty `_build/` folder:** This folder is a `gitignored` folder in which the site will be rendered locally for you to preview.
+**Install Quarto:** Download and install the Quarto CLI from
+<https://quarto.org/docs/get-started/>. That is the only dependency needed to
+render and preview the site — the site is static prose, code, and images (no R
+execution required to build).
+
+Verify it is installed:
 
 ```shell
-cd sem-in-r.github.io
-mkdir _build/
+quarto --version
 ```
 
-**Install the relevant packages:** Launch the project by opening the `.Rproj` file. Install the following package(s) are required to maintain and render the website.
-
-- distill - The site management and publication package. Full documentation available on distill website.
-
-```r
-install.packages('distill')
-```
+The rendered site is written to a `gitignored` `_build/docs/` folder for local
+preview; Quarto creates it automatically on the first render.
 
 ## Working with Git
 
 **Important branches:**
 
 - `main` - major code branch where all changes to the site source code are made
-- `build` - where all rendered content is placed (*gitignored* -- do not edit in this branch and do not try to push this to Github); note that you will not find the `build` branch in your repo - only the website manager maintains it.
+- `build` - where all rendered content is placed (do not edit or push this branch directly); note that you will not find the `build` branch in your normal checkout — only the website manager maintains it (it is a separate checkout under `_build/`).
 
-**Working with branches:** Please branch out of `main` branch and work in your own branch only! Create your articles/posts and submit a Pull Request (PR) back to main. Do not include the `_build/` folder in your PRs. The website maintainer will re-render your posts or other changes.
+**Working with branches:** Please branch out of `main` and work in your own branch only. Create your articles/posts and submit a Pull Request (PR) back to `main`. Do not include the `_build/` folder in your PRs — the website maintainer re-renders after merge.
 
-## Rendering Website
+## Rendering & Previewing the Website
 
-To render the whole website locally for preview, use the *Build Website* button in the *Build* pane of RStudio, or use the following command in R console:
+**Live preview (recommended while writing):** render + serve with live reload in
+one command. Editing any `.qmd` or the theme re-renders and refreshes the browser
+automatically:
 
-```r
-library(rmarkdown)
-
-render_site()
+```shell
+quarto preview
 ```
+
+**One-shot render** of the whole site to `_build/docs/`:
+
+```shell
+quarto render
+```
+
+(Claude Code users: the `/preview` and `/build` skills wrap these.)
 
 ## Creating New Blog Posts
 
-*See the example post in `_posts/2021-05-26-seminr-20-released` as you read the following instructions.*
+*See any existing post under `posts/` (e.g. `posts/2021-05-26-seminr-20-released/`) as a model.*
 
-**Create a new post:** Use `distill::create_post()` function to create a skeleton post in the `_posts/` directory.
+Posts live in dated folders under `posts/`, each with an `index.qmd`. The News
+listing (`posts.qmd`) auto-discovers them — there is no per-post build step, and
+no listing to hand-edit.
 
-```r
-library(distill)
+**Create a new post:** make a dated folder and a starter `index.qmd`. Claude Code
+users can run the **`/new-post`** skill, which scaffolds this given a title.
+Manually:
 
-create_post("Title of your post")
+```shell
+mkdir -p posts/2026-07-10-my-post-title/images
 ```
 
-**Edit your post:** Find the named folder for your new post in the root `_posts/` folder. 
+Then create `posts/2026-07-10-my-post-title/index.qmd` with frontmatter:
 
-- Edit the `.Rmd` file including its relevant frontmatter. 
-- Create an engaging thumbnail picture in an `images/` folder within the post's folder and refer to it in the post frontmatter. 
-- Please use the `images/` folder for all other relevant images too.
-- Knit the `.Rmd` when you wish to see a preview and one last time when you are finished. Note that `distill` will cache the rendered post within its folder and will not rerender it again with the entire website - rendering posts can be quite time consuming.
+```yaml
+---
+title: "My Post Title"
+description: |
+  One or two sentences summarizing the post — shown on the News listing.
+author:
+  - name: Your Name
+    url: https://your-url.example
+date: 2026-07-10
+image: /images/seminr_logos/seminr-logo.png
+---
+```
+
+**Edit your post:**
+
+- Write the body in Markdown below the frontmatter. Use native Quarto features —
+  e.g. `::: {.panel-tabset}` for language-switcher code tabs.
+- `image:` is the listing thumbnail. The default above is the landscape SEMinR
+  wordmark (the site default when a post has no image of its own). For post
+  specific art, put files in the post's `images/` folder and set
+  `image: images/your-thumbnail.png`.
+- Use the post's `images/` folder for all other images in the post too.
+- Run `quarto preview` (or `/preview`) to see it live; the post appears on the
+  News listing automatically, newest first.

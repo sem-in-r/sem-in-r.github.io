@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the website for the [SEMinR](https://seminr.io/) R package, built with [Distill for R Markdown](https://rstudio.github.io/distill/). It produces a static site deployed via GitHub Pages.
+This is the website for the [SEMinR](https://seminr.io/) R package, built with [Quarto](https://quarto.org). It produces a static site deployed via GitHub Pages.
 
 ## Related Repositories
 
@@ -25,60 +25,54 @@ than assuming.
 
 ## Build Commands
 
-**Install dependencies (R console):**
-```r
-install.packages('distill')
+**Install dependencies:** the only dependency is the [Quarto CLI](https://quarto.org/docs/get-started/). No R execution is needed to build — the site is static prose, code, and images.
+
+**Render full site:**
+```bash
+quarto render
 ```
+Output goes to `_build/docs/` (gitignored), set by `output-dir` in `_quarto.yml`. Prefer the **`/build`** skill, which wraps this.
 
-**Render full site (R console):**
-```r
-rmarkdown::render_site()
+**Preview with live reload:**
+```bash
+quarto preview
 ```
+Renders, serves, and watches the source in one step — editing any `.qmd` or the theme re-renders and refreshes the browser automatically. Prefer the **`/preview`** skill (it also opens Chrome to the page). There is **no separate build-then-serve step**: just save and the open tab updates.
 
-**Create a new blog post:** Follow the instructions in the **"Creating New Blog Posts"** section of `README.md`. (The basic mechanism is `distill::create_post("Title of your post")` in the R console, but the README is authoritative — use it.)
+**Create a new blog post:** use the **`/new-post`** skill (Quarto has no built-in post scaffolder), or follow the **"Creating New Blog Posts"** section of `README.md`. It scaffolds a dated `posts/YYYY-MM-DD-slug/index.qmd`. There is no per-post render step — `quarto render`/`quarto preview` discover new posts automatically and the News listing picks them up.
 
-**Knit a single post:** Open the post's `.Rmd` file and knit it. Distill caches rendered posts and won't re-render them during a full site build.
-
-Output goes to `_build/docs/` (gitignored).
-
-**Preview live-reloads:** If the local `/preview` server is already running, it
-live-updates whenever the site is rebuilt. After editing, just rebuild — do not
-re-run `/preview`.
-
-**Important:** Any `.md` or `.Rmd` file in the project root (outside of dotfolders like `.claude/` or underscore-prefixed dirs like `_posts/`) will be rendered into HTML by `rmarkdown::render_site()`. Keep non-site markdown files inside dotfolders to avoid unwanted build output.
+**Render scope:** `_quarto.yml`'s `project: render:` list renders only the site's `*.qmd` pages and `posts/`, so root markdown that isn't site content — `README.md` and the private `CLAUDE.local.md` — is never rendered into the output.
 
 ## Architecture
 
-- **`_site.yml`** — Main site config: navbar, output directory (`_build/docs`), base URL, cookie consent
-- **`index.Rmd`** — Homepage with SEMinR introduction and code examples
-- **`about.Rmd`** — Team/authors page
-- **`posts.Rmd`** — Blog listing page (uses `listing: posts` in frontmatter)
-- **`_posts/`** — Blog posts, each in a dated folder (`YYYY-MM-DD-slug/`)
-- **`images/`** — Shared site images (logo)
+- **`_quarto.yml`** — Main site config: project type/`output-dir` (`_build/docs`), `render:` list, `resources:` (CNAME, .nojekyll), navbar, theme, `site-url`, favicon, `execute: freeze`
+- **`index.qmd`** — Homepage with SEMinR introduction and code examples (includes a one-line script that enables the homepage's larger "hero" navbar)
+- **`packages.qmd`, `extras.qmd`, `resources.qmd`, `community.qmd`** — top-level content pages (Community is the team/authors page)
+- **`posts.qmd`** — Blog listing page (Quarto `listing:` — auto-discovers posts under `posts/`)
+- **`posts/`** — Blog posts, each in a dated folder (`YYYY-MM-DD-slug/index.qmd`)
+- **`images/`** — Shared site images (logos, homepage diagram)
 
-### Styling (`styles.css`)
+### Styling (`custom.scss`)
 
-Site CSS lives in **`styles.css`**, wired into `_site.yml` via the top-level
-**`theme: styles.css`** key. `theme:` applies the stylesheet **site-wide,
-including blog posts**, and Distill **inlines** it into every page's `<head>`
-at build time.
+Site CSS lives in **`custom.scss`**, a Quarto SCSS theme layer wired into
+`_quarto.yml` under `format: html: theme: [cosmo, custom.scss]`. Listing it in
+`theme:` applies it **site-wide, including blog posts**, so there is **no need
+to inline post-specific CSS**. Language-switcher code tabs use the native
+`::: {.panel-tabset}`, and the post byline is a restyled native title block.
 
-We deliberately use `theme:` rather than `css:` (under
-`output: distill::distill_article:`): `css:` only reaches the top-level pages,
-**not** `_posts/`. (That gap is also why post-specific CSS, like the code-tabs
-component, is sometimes inlined directly in a post's `.Rmd`.)
-
-**Because theme CSS is inlined at build time, editing `styles.css` requires a
-re-render (`/build` / `rmarkdown::render_site()`) for changes to appear — a
-plain file copy into `_build/docs/` will _not_ update the already-inlined
-pages.** After rebuilding, refresh the `/preview` browser tab.
+The file has `/*-- scss:defaults --*/` (SCSS variables like `$grid-body-width`,
+`$primary`) and `/*-- scss:rules --*/` (component CSS). **Editing `custom.scss`
+requires a re-render (`/build` or a running `quarto preview`) for changes to
+appear.** With `quarto preview` running, saves re-render and refresh the browser
+automatically.
 
 ### Blog Post Structure
 
-Each post lives in `_posts/YYYY-MM-DD-slug-title/` containing:
-- `slug-title.Rmd` — Post source with YAML frontmatter (title, description, author, date, preview image)
-- `images/` — Post-specific images (including thumbnail referenced by `preview:` in frontmatter)
-- Generated `_files/` directory and `.html` output from knitting
+Each post lives in `posts/YYYY-MM-DD-slug/` containing:
+- `index.qmd` — Post source with YAML frontmatter (`title`, `description`, `author`, `date` in ISO `YYYY-MM-DD`, `image:` thumbnail)
+- `images/` — Post-specific images (including the thumbnail referenced by `image:` in frontmatter)
+
+The dated folder name is the post's URL (`/posts/YYYY-MM-DD-slug/`); keep it stable to preserve links. Listing order is driven by the `date:` field.
 
 **Default post image:** When a post has no image of its own, use the **landscape SEMinR wordmark** (`images/seminr_logos/seminr-logo.png`), not the square logo (`images/seminr_logos/logo.png`).
 
@@ -92,9 +86,10 @@ The following skills are available and should be suggested when appropriate:
 
 | Skill | When to suggest |
 |-------|-----------------|
-| `/build` | User asks to build, render, or rebuild the site |
+| `/build` | User asks to build, render, or rebuild the site (`quarto render`) |
+| `/preview` | User asks to preview the site or view changes in the browser (`quarto preview` + Chrome) |
 | `/publish` | User asks to publish, deploy, or push the built site to GitHub Pages |
-| `/preview` | User asks to preview the built site or view changes in the browser |
+| `/new-post` | User asks to create/start a new blog post or news item |
 
 **When the user asks to "commit", "push", or "commit and push":** this almost always refers to the **`main`** branch (source files). If the context suggests the user may want to publish the rendered site instead (e.g., they just ran `/build`, or they mention the live site), **ask whether they meant to use `/publish`** before proceeding.
 
@@ -104,7 +99,7 @@ This repo uses two branches that correspond to two separate git checkouts:
 
 | Branch | Directory | Contents |
 |--------|-----------|----------|
-| **`main`** | Project root (`.`) | Source `.Rmd` files, config, skills — the working branch |
+| **`main`** | Project root (`.`) | Source `.qmd` files, `_quarto.yml`, `custom.scss`, skills — the working branch |
 | **`build`** | `_build/` | Rendered HTML output served by GitHub Pages |
 
 The `_build/` folder is a **separate git repo** checked out on the `build` branch of the same remote. It is gitignored by `main`.
