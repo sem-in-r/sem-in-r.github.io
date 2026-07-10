@@ -53,9 +53,8 @@ There is no per-post build step.
    ```
 
    - **`image:`** is the listing thumbnail. The default above is the **landscape
-     SEMinR wordmark** (the site-wide default when a post has no image of its
-     own — note: the landscape wordmark `seminr-logo.png`, not the square
-     `logo.png`). When the post has its own art, drop it in this folder's
+     SEMinR wordmark** (`seminr-logo.png`), the site-wide default when a post has
+     no image of its own. When the post has its own art, drop it in this folder's
      `images/` and change `image:` to `images/your-file.png`.
    - **`author:`** defaults to Soumya Ray; change the name/url for other authors
      (e.g. Nicholas Danks — https://nicholasdanks.com).

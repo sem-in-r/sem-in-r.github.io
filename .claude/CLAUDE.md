@@ -74,7 +74,7 @@ Each post lives in `posts/YYYY-MM-DD-slug/` containing:
 
 The dated folder name is the post's URL (`/posts/YYYY-MM-DD-slug/`); keep it stable to preserve links. Listing order is driven by the `date:` field.
 
-**Default post image:** When a post has no image of its own, use the **landscape SEMinR wordmark** (`images/seminr_logos/seminr-logo.png`), not the square logo (`images/seminr_logos/logo.png`).
+**Default post image:** When a post has no image of its own, use the **landscape SEMinR wordmark** (`images/seminr_logos/seminr-logo.png`).
 
 ## Deployment
 
