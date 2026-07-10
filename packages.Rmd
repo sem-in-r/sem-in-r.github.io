@@ -6,7 +6,6 @@ output:
   distill::distill_article:
     toc: true
     toc_depth: 1
-    css: styles.css
 ---
 
 SEMinR began as an [R package](https://github.com/sem-in-r/seminr) and has since

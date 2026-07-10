@@ -5,10 +5,9 @@ description: |
 output_dir: "_build/docs"
 base_url: https://seminr.io/
 favicon: images/seminr_logos/favicon.png
-# `theme:` applies site-wide INCLUDING blog posts (unlike the `css:` under
-# output below, which only reaches top-level pages). Both point at the same
-# stylesheet so the navbar centering and widened layout are consistent on every
-# page. See CLAUDE.md / the multilang post for why posts don't inherit `css:`.
+# `theme:` applies styles.css site-wide INCLUDING blog posts, inlining it into
+# every page at build time. We use it INSTEAD of `css:` under output (which only
+# reaches top-level pages, not `_posts/`). See CLAUDE.md's Styling section.
 theme: styles.css
 include: [".nojekyll", "CNAME"]
 navbar:
@@ -29,6 +28,5 @@ navbar:
       href: community.html
 output:
   distill::distill_article:
-    css: styles.css
     includes:
       after_body: _includes/byline-under-title.html

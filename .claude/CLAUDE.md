@@ -56,6 +56,23 @@ re-run `/preview`.
 - **`_posts/`** — Blog posts, each in a dated folder (`YYYY-MM-DD-slug/`)
 - **`images/`** — Shared site images (logo)
 
+### Styling (`styles.css`)
+
+Site CSS lives in **`styles.css`**, wired into `_site.yml` via the top-level
+**`theme: styles.css`** key. `theme:` applies the stylesheet **site-wide,
+including blog posts**, and Distill **inlines** it into every page's `<head>`
+at build time.
+
+We deliberately use `theme:` rather than `css:` (under
+`output: distill::distill_article:`): `css:` only reaches the top-level pages,
+**not** `_posts/`. (That gap is also why post-specific CSS, like the code-tabs
+component, is sometimes inlined directly in a post's `.Rmd`.)
+
+**Because theme CSS is inlined at build time, editing `styles.css` requires a
+re-render (`/build` / `rmarkdown::render_site()`) for changes to appear — a
+plain file copy into `_build/docs/` will _not_ update the already-inlined
+pages.** After rebuilding, refresh the `/preview` browser tab.
+
 ### Blog Post Structure
 
 Each post lives in `_posts/YYYY-MM-DD-slug-title/` containing:

@@ -6,7 +6,6 @@ output:
   distill::distill_article:
     toc: true
     toc_depth: 2
-    css: styles.css
 ---
 
 [**seminrExtras**](https://github.com/sem-in-r/seminrExtras) is a supplementary
