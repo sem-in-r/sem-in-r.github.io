@@ -1,0 +1,39 @@
+---
+title: "SEMinR 2.5.0 Released"
+description: |
+  SEMinR v2.5.0 is now on CRAN, bringing prediction to every interaction type, more flexible plots, a public accessor API for developers, and a round of bug fixes.
+author:
+  - name: Soumya Ray
+    url: https://soumyaray.com
+date: 2026-05-25
+image: images/SEMinR-logo.jpg
+---
+
+![SEMinR v2.5.0](images/SEMinR-logo.jpg)
+
+SEMinR 2.5.0 is released on CRAN! This release brings prediction to every interaction type, more flexible plots, and a round of bug fixes.
+
+**Improvements to prediction:** `predict()` and `predict_pls()` now work with ALL interaction methods — `product_indicator`, `orthogonal`, and quadratic terms — not just two-stage. Single predictions, k-fold cross-validation, and LOOCV all work across the board, and k-fold CV can now run in parallel for a real speed-up on larger jobs.
+
+**New plotting feature:** Custom confidence levels in plots — show 90%, 99%, or any alpha instead of the fixed 95%.
+
+**Developer-friendly tools:** A public, documented accessor API for constructs and measurement-model elements, so you can stop reaching into `seminr:::` for internals.
+
+**Lots of fixes:**
+
+- Bootstrapping now works with PLSc + higher-order constructs
+- Fixed the parallel-bootstrap "no package called seminr" error
+- `interaction_term()` no longer errors on a single-IV quadratic
+- CBSEM summaries now report path directions correctly (IV → DV)
+- Plot stars and summary-table p-values now agree
+
+A big thank you to the contributors behind this release:
+
+- **Nicholas Danks** — prediction support for all interaction methods, plus the plot/summary p-value consistency fix
+- **Andrej Pawluczenko** — the custom confidence-level plotting feature
+
+Update now:
+
+```r
+install.packages("seminr")
+```

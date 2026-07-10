@@ -1,0 +1,11 @@
+---
+title: "SEMinR News"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [image, date, title, description, author]
+  categories: false
+  feed: false
+  date-format: "MMMM D, YYYY"
+---
