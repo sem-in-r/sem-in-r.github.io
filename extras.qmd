@@ -30,8 +30,8 @@ matching-language SEMinR port, so it comes in the same **three variants**:
 :::
 
 > **Please note:** The Python and JavaScript/TypeScript ports are **experimental** for now.
-> The R package remains the authoritative implementation; validate results
-> against it before relying on a port for published work.
+> The R package remains the authoritative implementation; if you run into a problem
+> with a port, please report it on that port's repository.
 
 Select a tab below for installation instructions:
 
@@ -77,8 +77,8 @@ A Python port with numerical parity to the R package, built on the
 [`seminr`](https://pypi.org/project/seminr/) estimation engine. Requires
 Python 3.11+.
 
-> **Experimental.** Validate results against the R package before relying on it
-> for published work.
+> **Experimental.** Please report any issues on its
+> [GitHub repository](https://github.com/sem-in-r/seminrExtras-py/issues).
 
 **Install from PyPI** (pulls in `seminr` automatically):
 
@@ -113,8 +113,8 @@ A from-scratch TypeScript port that consumes an already-estimated model from
 [`@seminr/core`](https://www.npmjs.com/package/@seminr/core), the TypeScript
 SEMinR estimation engine. Pure ESM, targeting Node 18+ / Bun.
 
-> **Experimental.** `@seminr/extras` is in early development (`0.x`) — validate
-> results against the R package before relying on it for published work.
+> **Experimental.** `@seminr/extras` is in early development (`0.x`) — please report
+> any issues on its [GitHub repository](https://github.com/sem-in-r/seminrExtras-ts/issues).
 
 **Install from npm** (alongside the core estimation engine):
 
