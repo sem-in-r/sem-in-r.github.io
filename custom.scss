@@ -55,6 +55,38 @@ $primary: #2166ac;
   gap: 0.5em;
 }
 
+// --- Packages page: the "three variants" summary card ---
+.variant-summary {
+  margin: 1.25em 0;
+  padding: 0.9em 1.25em;
+  border: 1px solid $gray-300;
+  border-left: 4px solid $primary;
+  border-radius: 8px;
+  background: rgba($primary, 0.05);
+
+  ul {
+    margin: 0;
+    padding-left: 1.1em;
+  }
+  li + li {
+    margin-top: 0.4em;
+  }
+}
+
+// --- Live release-version badge (shields.io) shown per package variant ---
+// An inline span holding a linked shields.io SVG, sitting on its own line
+// directly under each variant's tab heading. inline-block so it keeps the
+// badge's own box; the wrapping paragraph supplies the vertical spacing.
+.pkg-badge {
+  display: inline-block;
+
+  img {
+    height: 20px;
+    width: auto;
+    vertical-align: middle;
+  }
+}
+
 // --- Inline language logos next to headings ---
 .lang-logo {
   height: 1.1em;

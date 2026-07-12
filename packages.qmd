@@ -2,24 +2,41 @@
 title: "Packages"
 description: |
   Find and install SEMinR for R, Python, and JavaScript/TypeScript.
-toc: true
-toc-depth: 1
+toc: false
 ---
 
-SEMinR began as an [R package](https://github.com/sem-in-r/seminr) and has since
-been ported to other languages. Every port aims for **numerical parity** with
-the R base: results are validated against R-generated fixtures on the bundled
-`mobi` / ECSI dataset, and the public API mirrors SEMinR's familiar names.
+SEMinR is **R-first**: the [R package](https://github.com/sem-in-r/seminr) is the
+authoritative implementation, and the Python and JavaScript/TypeScript ports
+maintain **numerical parity** with it. It comes in **three variants** — pick the
+one that fits your workflow:
+
+::: {.variant-summary}
+- <img src="images/logos/r.svg" alt="" class="lang-logo"> **R** — the authoritative package (on CRAN)
+- <img src="images/logos/python.svg" alt="" class="lang-logo"> **Python** — a port on PyPI *(experimental)*
+- <img src="images/logos/typescript.svg" alt="" class="lang-logo"> **JavaScript / TypeScript** — a port on npm *(experimental)*
+:::
+
+Each port is validated against R-generated fixtures on the bundled `mobi` / ECSI
+dataset, and its public API mirrors SEMinR's familiar names.
 
 > **Please note:** The Python and JavaScript/TypeScript ports are **experimental** for now.
 > The R package remains the authoritative implementation; we recommend validating
 > results against it before relying on a port for published work.
 
-Pick the version that fits your workflow:
+Select a tab below for installation instructions:
 
-# <img src="images/logos/r.svg" alt="R" class="lang-logo"> SEMinR for R
+<!-- The per-tab .pkg-badge below are LIVE shields.io version badges (auto-update
+     from CRAN/PyPI/npm). Keep the `.svg` in each URL *before* the `?` — without
+     it Pandoc's default-image-extension appends `.png` and breaks the query
+     string. See ".claude/CLAUDE.md > Gotchas". -->
 
-The original and authoritative implementation. Estimates PLS-SEM (including
+::: {.panel-tabset}
+
+## <img src="images/logos/r.svg" alt="" class="lang-logo"> R
+
+[[![SEMinR on CRAN](https://img.shields.io/cran/v/seminr.svg?label=CRAN&color=2166ac&style=flat-square)](https://cran.r-project.org/package=seminr)]{.pkg-badge}
+
+The authoritative reference implementation. Estimates PLS-SEM (including
 PLSc), covariance-based SEM, and CFA, with bootstrapping, PLSpredict, PLS-MGA,
 interactions, and higher-order constructs.
 
@@ -45,7 +62,9 @@ library(seminr)
 - **Source:** <https://github.com/sem-in-r/seminr>
 - **CRAN:** <https://cran.r-project.org/package=seminr>
 
-# <img src="images/logos/python.svg" alt="Python" class="lang-logo"> SEMinR for Python
+## <img src="images/logos/python.svg" alt="" class="lang-logo"> Python
+
+[[![SEMinR on PyPI](https://img.shields.io/pypi/v/seminr.svg?label=PyPI&color=2166ac&style=flat-square)](https://pypi.org/project/seminr/)]{.pkg-badge}
 
 A Python port with numerical parity to the R package (1e-5 for PLS quantities;
 tiered tolerances for CBSEM). Requires Python 3.11+; runtime dependencies are
@@ -69,7 +88,9 @@ pip install "seminr[pandas]"
 - **Source:** <https://github.com/sem-in-r/seminr-py>
 - **PyPI:** <https://pypi.org/project/seminr/>
 
-# <img src="images/logos/typescript.svg" alt="TypeScript" class="lang-logo"> SEMinR for JavaScript & TypeScript
+## <img src="images/logos/typescript.svg" alt="" class="lang-logo"> JavaScript & TypeScript
+
+[[![@seminr/core on npm](https://img.shields.io/npm/v/@seminr/core.svg?label=npm&color=2166ac&style=flat-square)](https://www.npmjs.com/package/@seminr/core)]{.pkg-badge}
 
 A zero-dependency, runtime-agnostic (Bun, Node, Deno, browser) port for running
 SEM analyses in a modern scripting runtime or embedding estimation in a product.
@@ -87,6 +108,8 @@ npm install @seminr/core
 
 - **Source:** <https://github.com/sem-in-r/seminr-ts>
 - **npm:** <https://www.npmjs.com/package/@seminr/core>
+
+:::
 
 ## Credits {.appendix}
 

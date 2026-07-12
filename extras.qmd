@@ -17,6 +17,35 @@ Structural Equation Modeling (PLS-SEM) using R* workbook (Hair et al., 2026).
 
 ## Installation
 
+Like SEMinR itself, seminrExtras is **R-first**: the R package is the
+authoritative implementation, and the Python and JavaScript/TypeScript ports
+maintain **numerical parity** with it (validated against R-generated golden
+fixtures). Each port consumes an already-estimated model from the
+matching-language SEMinR port, so it comes in the same **three variants**:
+
+::: {.variant-summary}
+- <img src="images/logos/r.svg" alt="" class="lang-logo"> **R** — the authoritative package (on CRAN)
+- <img src="images/logos/python.svg" alt="" class="lang-logo"> **Python** — a port on PyPI *(experimental)*
+- <img src="images/logos/typescript.svg" alt="" class="lang-logo"> **JavaScript / TypeScript** — a port on npm *(experimental)*
+:::
+
+> **Please note:** The Python and JavaScript/TypeScript ports are **experimental** for now.
+> The R package remains the authoritative implementation; validate results
+> against it before relying on a port for published work.
+
+Select a tab below for installation instructions:
+
+<!-- The per-tab .pkg-badge below are LIVE shields.io version badges (auto-update
+     from CRAN/PyPI/npm). Keep the `.svg` in each URL *before* the `?` — without
+     it Pandoc's default-image-extension appends `.png` and breaks the query
+     string. See ".claude/CLAUDE.md > Gotchas". -->
+
+::: {.panel-tabset}
+
+### <img src="images/logos/r.svg" alt="" class="lang-logo"> R
+
+[[![seminrExtras on CRAN](https://img.shields.io/cran/v/seminrExtras.svg?label=CRAN&color=2166ac&style=flat-square)](https://cran.r-project.org/package=seminrExtras)]{.pkg-badge}
+
 **Install the released version from CRAN:**
 
 ```r
@@ -36,6 +65,76 @@ Then load it alongside SEMinR:
 library(seminr)
 library(seminrExtras)
 ```
+
+- **Source:** <https://github.com/sem-in-r/seminrExtras>
+- **CRAN:** <https://cran.r-project.org/package=seminrExtras>
+
+### <img src="images/logos/python.svg" alt="" class="lang-logo"> Python
+
+[[![seminrExtras on PyPI](https://img.shields.io/pypi/v/seminrExtras.svg?label=PyPI&color=2166ac&style=flat-square)](https://pypi.org/project/seminrExtras/)]{.pkg-badge}
+
+A Python port with numerical parity to the R package, built on the
+[`seminr`](https://pypi.org/project/seminr/) estimation engine. Requires
+Python 3.11+.
+
+> **Experimental.** Validate results against the R package before relying on it
+> for published work.
+
+**Install from PyPI** (pulls in `seminr` automatically):
+
+```bash
+pip install seminrExtras
+```
+
+**Optional extras** — matplotlib plots and pandas-friendly input:
+
+```bash
+pip install "seminrExtras[plot]"
+pip install "seminrExtras[pandas]"
+```
+
+Then evaluate an already-estimated `seminr` model:
+
+```python
+from seminrExtras import assess_cvpat
+
+result = assess_cvpat(model, nboot=200, seed=123)
+print(result)
+```
+
+- **Source:** <https://github.com/sem-in-r/seminrExtras-py>
+- **PyPI:** <https://pypi.org/project/seminrExtras/>
+
+### <img src="images/logos/typescript.svg" alt="" class="lang-logo"> JavaScript & TypeScript
+
+[[![@seminr/extras on npm](https://img.shields.io/npm/v/@seminr/extras.svg?label=npm&color=2166ac&style=flat-square)](https://www.npmjs.com/package/@seminr/extras)]{.pkg-badge}
+
+A from-scratch TypeScript port that consumes an already-estimated model from
+[`@seminr/core`](https://www.npmjs.com/package/@seminr/core), the TypeScript
+SEMinR estimation engine. Pure ESM, targeting Node 18+ / Bun.
+
+> **Experimental.** `@seminr/extras` is in early development (`0.x`) — validate
+> results against the R package before relying on it for published work.
+
+**Install from npm** (alongside the core estimation engine):
+
+```bash
+npm install @seminr/core @seminr/extras
+```
+
+Then assess an estimated SEMinR model:
+
+```typescript
+import { assessCvpat } from "@seminr/extras";
+
+const result = assessCvpat(model, { nboot: 2000, seed: 123 })!;
+console.log(String(result));
+```
+
+- **Source:** <https://github.com/sem-in-r/seminrExtras-ts>
+- **npm:** <https://www.npmjs.com/package/@seminr/extras>
+
+:::
 
 ## What it provides
 

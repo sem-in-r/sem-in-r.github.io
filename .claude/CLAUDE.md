@@ -43,6 +43,27 @@ Renders, serves, and watches the source in one step — editing any `.qmd` or th
 
 **Render scope:** `_quarto.yml`'s `project: render:` list renders only the site's `*.qmd` pages and `posts/`, so root markdown that isn't site content — `README.md` and the private `CLAUDE.local.md` — is never rendered into the output.
 
+### Gotchas (learned the hard way)
+
+- **Never run `quarto render` while `quarto preview` is live.** They share the
+  same output dir and SASS cache (Quarto's Deno KV store). A manual render
+  underneath a running preview corrupts that cache, and the preview then throws
+  `Bad resource ID` (`SassCache.getFromHash` in the log) on every page. Fix:
+  `pkill -f 'quarto preview'` and restart it. So while previewing, **just save
+  and let live-reload re-render** — don't invoke `quarto render` yourself. If you
+  need a one-off standalone render (e.g. to grep the HTML), stop the preview
+  first.
+
+- **Extensionless image URLs get `.png` appended by Pandoc.** Quarto's
+  `default-image-extension: png` appends `.png` to any image whose path has no
+  file extension. For a shields.io badge like
+  `https://img.shields.io/cran/v/seminr?...&style=flat-square` this yields
+  `...style=flat-square.png`, silently breaking the query string. Fix: give the
+  URL an explicit format extension **in the path, before the `?`** —
+  `https://img.shields.io/cran/v/seminr.svg?...`. shields serves SVG for the
+  `.svg` suffix, and Pandoc leaves a URL with an extension alone. The version
+  badges on `packages.qmd`/`extras.qmd` rely on this — keep the `.svg`.
+
 ## Architecture
 
 - **`_quarto.yml`** — Main site config: project type/`output-dir` (`_build/docs`), `render:` list, `resources:` (CNAME, .nojekyll), navbar, theme, `site-url`, favicon, `execute: freeze`
