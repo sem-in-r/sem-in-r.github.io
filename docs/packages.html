@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e74758c7eb223a4a1a7ebacef0a89aba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6500b8d01f4a159f66587832295e02fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -95,7 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -143,17 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#seminr-for-r" id="toc-seminr-for-r" class="nav-link active" data-scroll-target="#seminr-for-r"><img src="images/logos/r.svg" alt="R" class="lang-logo"> SEMinR for R</a></li>
-  <li><a href="#seminr-for-python" id="toc-seminr-for-python" class="nav-link" data-scroll-target="#seminr-for-python"><img src="images/logos/python.svg" alt="Python" class="lang-logo"> SEMinR for Python</a></li>
-  <li><a href="#seminr-for-javascript-typescript" id="toc-seminr-for-javascript-typescript" class="nav-link" data-scroll-target="#seminr-for-javascript-typescript"><img src="images/logos/typescript.svg" alt="TypeScript" class="lang-logo"> SEMinR for JavaScript &amp; TypeScript</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -181,14 +171,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>SEMinR began as an <a href="https://github.com/sem-in-r/seminr">R package</a> and has since been ported to other languages. Every port aims for <strong>numerical parity</strong> with the R base: results are validated against R-generated fixtures on the bundled <code>mobi</code> / ECSI dataset, and the public API mirrors SEMinR’s familiar names.</p>
+<p>SEMinR is <strong>R-first</strong>: the <a href="https://github.com/sem-in-r/seminr">R package</a> is the authoritative implementation, and the Python and JavaScript/TypeScript ports maintain <strong>numerical parity</strong> with it. It comes in <strong>three variants</strong> — pick the one that fits your workflow:</p>
+<div class="variant-summary">
+<ul>
+<li><img src="images/logos/r.svg" alt="" class="lang-logo"> <strong>R</strong> — the authoritative package (on CRAN)</li>
+<li><img src="images/logos/python.svg" alt="" class="lang-logo"> <strong>Python</strong> — a port on PyPI <em>(experimental)</em></li>
+<li><img src="images/logos/typescript.svg" alt="" class="lang-logo"> <strong>JavaScript / TypeScript</strong> — a port on npm <em>(experimental)</em></li>
+</ul>
+</div>
+<p>Each port is validated against R-generated fixtures on the bundled <code>mobi</code> / ECSI dataset, and its public API mirrors SEMinR’s familiar names.</p>
 <blockquote class="blockquote">
 <p><strong>Please note:</strong> The Python and JavaScript/TypeScript ports are <strong>experimental</strong> for now. The R package remains the authoritative implementation; we recommend validating results against it before relying on a port for published work.</p>
 </blockquote>
-<p>Pick the version that fits your workflow:</p>
-<section id="seminr-for-r" class="level1">
-<h1><img src="images/logos/r.svg" alt="R" class="lang-logo"> SEMinR for R</h1>
-<p>The original and authoritative implementation. Estimates PLS-SEM (including PLSc), covariance-based SEM, and CFA, with bootstrapping, PLSpredict, PLS-MGA, interactions, and higher-order constructs.</p>
+<p>Select a tab below for installation instructions:</p>
+<!-- The per-tab .pkg-badge below are LIVE shields.io version badges (auto-update
+     from CRAN/PyPI/npm). Keep the `.svg` in each URL *before* the `?` — without
+     it Pandoc's default-image-extension appends `.png` and breaks the query
+     string. See ".claude/CLAUDE.md > Gotchas". -->
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><img src="images/logos/r.svg" alt="" class="lang-logo"> R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><img src="images/logos/python.svg" alt="" class="lang-logo"> Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href=""><img src="images/logos/typescript.svg" alt="" class="lang-logo"> JavaScript &amp; TypeScript</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><span class="pkg-badge"><a href="https://cran.r-project.org/package=seminr"><img src="https://img.shields.io/cran/v/seminr.svg?label=CRAN&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="SEMinR on CRAN"></a></span></p>
+<p>The authoritative reference implementation. Estimates PLS-SEM (including PLSc), covariance-based SEM, and CFA, with bootstrapping, PLSpredict, PLS-MGA, interactions, and higher-order constructs.</p>
 <p><strong>Install the released version from CRAN:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"seminr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Or install the development version from GitHub:</strong></p>
@@ -200,9 +205,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Source:</strong> <a href="https://github.com/sem-in-r/seminr" class="uri">https://github.com/sem-in-r/seminr</a></li>
 <li><strong>CRAN:</strong> <a href="https://cran.r-project.org/package=seminr" class="uri">https://cran.r-project.org/package=seminr</a></li>
 </ul>
-</section>
-<section id="seminr-for-python" class="level1">
-<h1><img src="images/logos/python.svg" alt="Python" class="lang-logo"> SEMinR for Python</h1>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><span class="pkg-badge"><a href="https://pypi.org/project/seminr/"><img src="https://img.shields.io/pypi/v/seminr.svg?label=PyPI&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="SEMinR on PyPI"></a></span></p>
 <p>A Python port with numerical parity to the R package (1e-5 for PLS quantities; tiered tolerances for CBSEM). Requires Python 3.11+; runtime dependencies are NumPy and SciPy only.</p>
 <blockquote class="blockquote">
 <p><strong>Experimental.</strong> This port is still maturing — validate results against the R package before relying on it for published work.</p>
@@ -215,9 +220,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Source:</strong> <a href="https://github.com/sem-in-r/seminr-py" class="uri">https://github.com/sem-in-r/seminr-py</a></li>
 <li><strong>PyPI:</strong> <a href="https://pypi.org/project/seminr/" class="uri">https://pypi.org/project/seminr/</a></li>
 </ul>
-</section>
-<section id="seminr-for-javascript-typescript" class="level1">
-<h1><img src="images/logos/typescript.svg" alt="TypeScript" class="lang-logo"> SEMinR for JavaScript &amp; TypeScript</h1>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><span class="pkg-badge"><a href="https://www.npmjs.com/package/@seminr/core"><img src="https://img.shields.io/npm/v/@seminr/core.svg?label=npm&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="@seminr/core on npm"></a></span></p>
 <p>A zero-dependency, runtime-agnostic (Bun, Node, Deno, browser) port for running SEM analyses in a modern scripting runtime or embedding estimation in a product. It installs and runs as plain JavaScript, and — being written in TypeScript — ships first-class type declarations for TypeScript projects.</p>
 <blockquote class="blockquote">
 <p><strong>Experimental.</strong> <code>seminr-ts</code> is in early development (<code>0.x</code>) — validate results against the R package before relying on it for published work.</p>
@@ -228,8 +233,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Source:</strong> <a href="https://github.com/sem-in-r/seminr-ts" class="uri">https://github.com/sem-in-r/seminr-ts</a></li>
 <li><strong>npm:</strong> <a href="https://www.npmjs.com/package/@seminr/core" class="uri">https://www.npmjs.com/package/@seminr/core</a></li>
 </ul>
+</div>
+</div>
+</div>
 
-</section>
 
 <div id="quarto-appendix" class="default"><section id="credits" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Credits</h2><div class="quarto-appendix-contents">
 

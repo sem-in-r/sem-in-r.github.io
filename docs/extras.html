@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e74758c7eb223a4a1a7ebacef0a89aba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6500b8d01f4a159f66587832295e02fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -188,6 +188,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>It is also the home of the example models used in the <em>Partial Least Squares Structural Equation Modeling (PLS-SEM) using R</em> workbook (Hair et al., 2026).</p>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>Like SEMinR itself, seminrExtras is <strong>R-first</strong>: the R package is the authoritative implementation, and the Python and JavaScript/TypeScript ports maintain <strong>numerical parity</strong> with it (validated against R-generated golden fixtures). Each port consumes an already-estimated model from the matching-language SEMinR port, so it comes in the same <strong>three variants</strong>:</p>
+<div class="variant-summary">
+<ul>
+<li><img src="images/logos/r.svg" alt="" class="lang-logo"> <strong>R</strong> — the authoritative package (on CRAN)</li>
+<li><img src="images/logos/python.svg" alt="" class="lang-logo"> <strong>Python</strong> — a port on PyPI <em>(experimental)</em></li>
+<li><img src="images/logos/typescript.svg" alt="" class="lang-logo"> <strong>JavaScript / TypeScript</strong> — a port on npm <em>(experimental)</em></li>
+</ul>
+</div>
+<blockquote class="blockquote">
+<p><strong>Please note:</strong> The Python and JavaScript/TypeScript ports are <strong>experimental</strong> for now. The R package remains the authoritative implementation; validate results against it before relying on a port for published work.</p>
+</blockquote>
+<p>Select a tab below for installation instructions:</p>
+<!-- The per-tab .pkg-badge below are LIVE shields.io version badges (auto-update
+     from CRAN/PyPI/npm). Keep the `.svg` in each URL *before* the `?` — without
+     it Pandoc's default-image-extension appends `.png` and breaks the query
+     string. See ".claude/CLAUDE.md > Gotchas". -->
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><img src="images/logos/r.svg" alt="" class="lang-logo"> R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><img src="images/logos/python.svg" alt="" class="lang-logo"> Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href=""><img src="images/logos/typescript.svg" alt="" class="lang-logo"> JavaScript &amp; TypeScript</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><span class="pkg-badge"><a href="https://cran.r-project.org/package=seminrExtras"><img src="https://img.shields.io/cran/v/seminrExtras.svg?label=CRAN&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="seminrExtras on CRAN"></a></span></p>
 <p><strong>Install the released version from CRAN:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"seminrExtras"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Or install the development version from GitHub:</strong></p>
@@ -196,6 +217,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Then load it alongside SEMinR:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(seminr)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(seminrExtras)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><strong>Source:</strong> <a href="https://github.com/sem-in-r/seminrExtras" class="uri">https://github.com/sem-in-r/seminrExtras</a></li>
+<li><strong>CRAN:</strong> <a href="https://cran.r-project.org/package=seminrExtras" class="uri">https://cran.r-project.org/package=seminrExtras</a></li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><span class="pkg-badge"><a href="https://pypi.org/project/seminrExtras/"><img src="https://img.shields.io/pypi/v/seminrExtras.svg?label=PyPI&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="seminrExtras on PyPI"></a></span></p>
+<p>A Python port with numerical parity to the R package, built on the <a href="https://pypi.org/project/seminr/"><code>seminr</code></a> estimation engine. Requires Python 3.11+.</p>
+<blockquote class="blockquote">
+<p><strong>Experimental.</strong> Validate results against the R package before relying on it for published work.</p>
+</blockquote>
+<p><strong>Install from PyPI</strong> (pulls in <code>seminr</code> automatically):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install seminrExtras</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Optional extras</strong> — matplotlib plots and pandas-friendly input:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">"seminrExtras[plot]"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">"seminrExtras[pandas]"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then evaluate an already-estimated <code>seminr</code> model:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> seminrExtras <span class="im">import</span> assess_cvpat</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> assess_cvpat(model, nboot<span class="op">=</span><span class="dv">200</span>, seed<span class="op">=</span><span class="dv">123</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><strong>Source:</strong> <a href="https://github.com/sem-in-r/seminrExtras-py" class="uri">https://github.com/sem-in-r/seminrExtras-py</a></li>
+<li><strong>PyPI:</strong> <a href="https://pypi.org/project/seminrExtras/" class="uri">https://pypi.org/project/seminrExtras/</a></li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><span class="pkg-badge"><a href="https://www.npmjs.com/package/@seminr/extras"><img src="https://img.shields.io/npm/v/@seminr/extras.svg?label=npm&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="@seminr/extras on npm"></a></span></p>
+<p>A from-scratch TypeScript port that consumes an already-estimated model from <a href="https://www.npmjs.com/package/@seminr/core"><code>@seminr/core</code></a>, the TypeScript SEMinR estimation engine. Pure ESM, targeting Node 18+ / Bun.</p>
+<blockquote class="blockquote">
+<p><strong>Experimental.</strong> <code>@seminr/extras</code> is in early development (<code>0.x</code>) — validate results against the R package before relying on it for published work.</p>
+</blockquote>
+<p><strong>Install from npm</strong> (alongside the core estimation engine):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install @seminr/core @seminr/extras</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then assess an estimated SEMinR model:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { assessCvpat } <span class="im">from</span> <span class="st">"@seminr/extras"</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> result <span class="op">=</span> <span class="fu">assessCvpat</span>(model<span class="op">,</span> { nboot<span class="op">:</span> <span class="dv">2000</span><span class="op">,</span> seed<span class="op">:</span> <span class="dv">123</span> })<span class="op">!;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="bu">String</span>(result))<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><strong>Source:</strong> <a href="https://github.com/sem-in-r/seminrExtras-ts" class="uri">https://github.com/sem-in-r/seminrExtras-ts</a></li>
+<li><strong>npm:</strong> <a href="https://www.npmjs.com/package/@seminr/extras" class="uri">https://www.npmjs.com/package/@seminr/extras</a></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="what-it-provides" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-provides">What it provides</h2>
@@ -307,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="textbook-demos" class="level2">
 <h2 class="anchored" data-anchor-id="textbook-demos">Textbook demos</h2>
 <p>seminrExtras bundles the demo files for the <em>PLS-SEM using R</em> workbook (Hair et al., 2026). After loading the package, list and run them with <code>demo()</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">demo</span>(<span class="st">"seminr-pls-cvpat"</span>, <span class="at">package =</span> <span class="st">"seminrExtras"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">demo</span>(<span class="st">"seminr-pls-cvpat"</span>, <span class="at">package =</span> <span class="st">"seminrExtras"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Available demos include method walkthroughs (<code>seminr-pls-cvpat</code>, <code>seminr-pls-pcm</code>, <code>seminr-pls-cipma</code>, <code>seminr-pls-coa</code>, <code>seminr-pls-nca</code>, <code>seminr-pls-fimix</code>, <code>seminr-pls-cta</code>, <code>seminr-pls-pos</code>, <code>seminr-pls-congruence</code>) and per-chapter primers (<code>seminr-primer-v2-chap2</code> through <code>seminr-primer-v2-chap8</code>).</p>
 </section>
 <section id="links" class="level2">
