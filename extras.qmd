@@ -15,6 +15,19 @@ function accepts an estimated `seminr` model object and returns results with
 It is also the home of the example models used in the *Partial Least Squares
 Structural Equation Modeling (PLS-SEM) using R* workbook (Hair et al., 2026).
 
+## What it provides
+
+seminrExtras implements a range of methods for advanced PLS-SEM assessment:
+
+- **Composite Overfit Analysis (COA)** — detect observation-level overfitting via predictive deviance trees and parameter instability analysis (Danks, Ray, & Shmueli, 2024).
+- **Congruence testing** — bootstrapped congruence coefficient testing for construct validity (Franke, Sarstedt, & Danks, 2021).
+- **Cross-Validated Predictive Ability Test (CVPAT)** — compare a model's predictive performance against benchmarks or alternative models (Liengaard et al., 2021; Sharma et al., 2023).
+- **Predictive Contribution of the Mediator (PCM)** — test whether a mediating construct improves out-of-sample predictive accuracy (Danks, 2021).
+- **Importance-Performance Map Analysis (IPMA & cIPMA)** — identify constructs that are both important and, via Necessary Condition Analysis integration, necessary (Ringle & Sarstedt, 2016; Hauff et al., 2024).
+- **Necessary Condition Analysis (NCA & NCA-ESSE)** — test whether predictors are necessary conditions for an outcome, complementing PLS-SEM's sufficiency logic, with an effect-size sensitivity extension (Dul, 2016; Becker et al., 2026).
+- **Confirmatory Tetrad Analysis (CTA-PLS)** — empirically test whether a construct's measurement model is reflective or formative (Gudergan et al., 2008).
+- **Unobserved heterogeneity** — detect latent classes via **FIMIX-PLS** (EM-based probabilistic segmentation) and **PLS-POS** (deterministic prediction-oriented segmentation).
+
 ## Installation
 
 Like SEMinR itself, seminrExtras is **R-first**: the R package is the
@@ -135,19 +148,6 @@ console.log(String(result));
 - **npm:** <https://www.npmjs.com/package/@seminr/extras>
 
 :::
-
-## What it provides
-
-seminrExtras implements a range of methods for advanced PLS-SEM assessment:
-
-- **Composite Overfit Analysis (COA)** — detect observation-level overfitting via predictive deviance trees and parameter instability analysis (Danks, Ray, & Shmueli, 2024).
-- **Congruence testing** — bootstrapped congruence coefficient testing for construct validity (Franke, Sarstedt, & Danks, 2021).
-- **Cross-Validated Predictive Ability Test (CVPAT)** — compare a model's predictive performance against benchmarks or alternative models (Liengaard et al., 2021; Sharma et al., 2023).
-- **Predictive Contribution of the Mediator (PCM)** — test whether a mediating construct improves out-of-sample predictive accuracy (Danks, 2021).
-- **Importance-Performance Map Analysis (IPMA & cIPMA)** — identify constructs that are both important and, via Necessary Condition Analysis integration, necessary (Ringle & Sarstedt, 2016; Hauff et al., 2024).
-- **Necessary Condition Analysis (NCA & NCA-ESSE)** — test whether predictors are necessary conditions for an outcome, complementing PLS-SEM's sufficiency logic, with an effect-size sensitivity extension (Dul, 2016; Becker et al., 2026).
-- **Confirmatory Tetrad Analysis (CTA-PLS)** — empirically test whether a construct's measurement model is reflective or formative (Gudergan et al., 2008).
-- **Unobserved heterogeneity** — detect latent classes via **FIMIX-PLS** (EM-based probabilistic segmentation) and **PLS-POS** (deterministic prediction-oriented segmentation).
 
 ## Function reference
 
