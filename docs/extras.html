@@ -148,8 +148,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#what-it-provides" id="toc-what-it-provides" class="nav-link" data-scroll-target="#what-it-provides">What it provides</a></li>
+  <li><a href="#what-it-provides" id="toc-what-it-provides" class="nav-link active" data-scroll-target="#what-it-provides">What it provides</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#function-reference" id="toc-function-reference" class="nav-link" data-scroll-target="#function-reference">Function reference</a></li>
   <li><a href="#textbook-demos" id="toc-textbook-demos" class="nav-link" data-scroll-target="#textbook-demos">Textbook demos</a></li>
   <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
@@ -186,6 +186,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><a href="https://github.com/sem-in-r/seminrExtras"><strong>seminrExtras</strong></a> is a supplementary package for <a href="index.html">SEMinR</a> — not a standalone package. It adds advanced tools for evaluating and validating PLS-SEM models estimated with SEMinR. Every function accepts an estimated <code>seminr</code> model object and returns results with <code>print</code>, <code>summary</code>, and <code>plot</code> methods.</p>
 <p>It is also the home of the example models used in the <em>Partial Least Squares Structural Equation Modeling (PLS-SEM) using R</em> workbook (Hair et al., 2026).</p>
+<section id="what-it-provides" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-provides">What it provides</h2>
+<p>seminrExtras implements a range of methods for advanced PLS-SEM assessment:</p>
+<ul>
+<li><strong>Composite Overfit Analysis (COA)</strong> — detect observation-level overfitting via predictive deviance trees and parameter instability analysis (Danks, Ray, &amp; Shmueli, 2024).</li>
+<li><strong>Congruence testing</strong> — bootstrapped congruence coefficient testing for construct validity (Franke, Sarstedt, &amp; Danks, 2021).</li>
+<li><strong>Cross-Validated Predictive Ability Test (CVPAT)</strong> — compare a model’s predictive performance against benchmarks or alternative models (Liengaard et al., 2021; Sharma et al., 2023).</li>
+<li><strong>Predictive Contribution of the Mediator (PCM)</strong> — test whether a mediating construct improves out-of-sample predictive accuracy (Danks, 2021).</li>
+<li><strong>Importance-Performance Map Analysis (IPMA &amp; cIPMA)</strong> — identify constructs that are both important and, via Necessary Condition Analysis integration, necessary (Ringle &amp; Sarstedt, 2016; Hauff et al., 2024).</li>
+<li><strong>Necessary Condition Analysis (NCA &amp; NCA-ESSE)</strong> — test whether predictors are necessary conditions for an outcome, complementing PLS-SEM’s sufficiency logic, with an effect-size sensitivity extension (Dul, 2016; Becker et al., 2026).</li>
+<li><strong>Confirmatory Tetrad Analysis (CTA-PLS)</strong> — empirically test whether a construct’s measurement model is reflective or formative (Gudergan et al., 2008).</li>
+<li><strong>Unobserved heterogeneity</strong> — detect latent classes via <strong>FIMIX-PLS</strong> (EM-based probabilistic segmentation) and <strong>PLS-POS</strong> (deterministic prediction-oriented segmentation).</li>
+</ul>
+</section>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>Like SEMinR itself, seminrExtras is <strong>R-first</strong>: the R package is the authoritative implementation, and the Python and JavaScript/TypeScript ports maintain <strong>numerical parity</strong> with it (validated against R-generated golden fixtures). Each port consumes an already-estimated model from the matching-language SEMinR port, so it comes in the same <strong>three variants</strong>:</p>
@@ -263,20 +277,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-</section>
-<section id="what-it-provides" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-provides">What it provides</h2>
-<p>seminrExtras implements a range of methods for advanced PLS-SEM assessment:</p>
-<ul>
-<li><strong>Composite Overfit Analysis (COA)</strong> — detect observation-level overfitting via predictive deviance trees and parameter instability analysis (Danks, Ray, &amp; Shmueli, 2024).</li>
-<li><strong>Congruence testing</strong> — bootstrapped congruence coefficient testing for construct validity (Franke, Sarstedt, &amp; Danks, 2021).</li>
-<li><strong>Cross-Validated Predictive Ability Test (CVPAT)</strong> — compare a model’s predictive performance against benchmarks or alternative models (Liengaard et al., 2021; Sharma et al., 2023).</li>
-<li><strong>Predictive Contribution of the Mediator (PCM)</strong> — test whether a mediating construct improves out-of-sample predictive accuracy (Danks, 2021).</li>
-<li><strong>Importance-Performance Map Analysis (IPMA &amp; cIPMA)</strong> — identify constructs that are both important and, via Necessary Condition Analysis integration, necessary (Ringle &amp; Sarstedt, 2016; Hauff et al., 2024).</li>
-<li><strong>Necessary Condition Analysis (NCA &amp; NCA-ESSE)</strong> — test whether predictors are necessary conditions for an outcome, complementing PLS-SEM’s sufficiency logic, with an effect-size sensitivity extension (Dul, 2016; Becker et al., 2026).</li>
-<li><strong>Confirmatory Tetrad Analysis (CTA-PLS)</strong> — empirically test whether a construct’s measurement model is reflective or formative (Gudergan et al., 2008).</li>
-<li><strong>Unobserved heterogeneity</strong> — detect latent classes via <strong>FIMIX-PLS</strong> (EM-based probabilistic segmentation) and <strong>PLS-POS</strong> (deterministic prediction-oriented segmentation).</li>
-</ul>
 </section>
 <section id="function-reference" class="level2">
 <h2 class="anchored" data-anchor-id="function-reference">Function reference</h2>
