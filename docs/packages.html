@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Each port is validated against R-generated fixtures on the bundled <code>mobi</code> / ECSI dataset, and its public API mirrors SEMinR’s familiar names.</p>
 <blockquote class="blockquote">
-<p><strong>Please note:</strong> The Python and JavaScript/TypeScript ports are <strong>experimental</strong> for now. The R package remains the authoritative implementation; we recommend validating results against it before relying on a port for published work.</p>
+<p><strong>Please note:</strong> The Python and JavaScript/TypeScript ports are <strong>experimental</strong> for now. The R package remains the authoritative implementation; if you run into a problem with a port, please report it on that port’s repository.</p>
 </blockquote>
 <p>Select a tab below for installation instructions:</p>
 <!-- The per-tab .pkg-badge below are LIVE shields.io version badges (auto-update
@@ -210,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span class="pkg-badge"><a href="https://pypi.org/project/seminr/"><img src="https://img.shields.io/pypi/v/seminr.svg?label=PyPI&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="SEMinR on PyPI"></a></span></p>
 <p>A Python port with numerical parity to the R package (1e-5 for PLS quantities; tiered tolerances for CBSEM). Requires Python 3.11+; runtime dependencies are NumPy and SciPy only.</p>
 <blockquote class="blockquote">
-<p><strong>Experimental.</strong> This port is still maturing — validate results against the R package before relying on it for published work.</p>
+<p><strong>Experimental.</strong> This port is still maturing — please report any issues on its <a href="https://github.com/sem-in-r/seminr-py/issues">GitHub repository</a>.</p>
 </blockquote>
 <p><strong>Install from PyPI:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install seminr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span class="pkg-badge"><a href="https://www.npmjs.com/package/@seminr/core"><img src="https://img.shields.io/npm/v/@seminr/core.svg?label=npm&amp;color=2166ac&amp;style=flat-square" class="img-fluid" alt="@seminr/core on npm"></a></span></p>
 <p>A zero-dependency, runtime-agnostic (Bun, Node, Deno, browser) port for running SEM analyses in a modern scripting runtime or embedding estimation in a product. It installs and runs as plain JavaScript, and — being written in TypeScript — ships first-class type declarations for TypeScript projects.</p>
 <blockquote class="blockquote">
-<p><strong>Experimental.</strong> <code>seminr-ts</code> is in early development (<code>0.x</code>) — validate results against the R package before relying on it for published work.</p>
+<p><strong>Experimental.</strong> <code>seminr-ts</code> is in early development (<code>0.x</code>) — please report any issues on its <a href="https://github.com/sem-in-r/seminr-ts/issues">GitHub repository</a>.</p>
 </blockquote>
 <p><strong>Install from npm:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install @seminr/core</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
