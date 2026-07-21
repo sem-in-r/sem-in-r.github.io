@@ -14,9 +14,13 @@ project:
 # Copied verbatim into the output root:
 #   CNAME     — the custom domain (seminr.io) for GitHub Pages
 #   .nojekyll — tells GitHub Pages to serve the files as-is (no Jekyll)
+#   workbook  — a self-contained (embed-resources) HTML book served at
+#               seminr.io/workbook/ (workbook/index.html). Copied as-is, not
+#               rendered — it is not a site .qmd page.
 resources:
   - CNAME
   - .nojekyll
+  - workbook
 
 website:
   title: "SEMinR"

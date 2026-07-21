@@ -26,6 +26,7 @@ to assessing measurement and structural models — using SEMinR throughout. It i
 over 45,000 times.
 
 - [Read or download the book (Springer, open access)](https://link.springer.com/book/10.1007/978-3-030-80519-7)
+- [Concise R code and outputs for the book's examples](/workbook/)
 :::
 
 ### SEMinR Lecture Series (video course) {.resource-title}
