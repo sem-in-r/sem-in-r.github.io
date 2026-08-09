@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nicholas Danks">
+<meta name="dcterms.date" content="2026-08-09">
+<meta name="description" content="Five new tutorial videos walk through a complete PLS-SEM analysis in R with SEMinR, each paired with a chapter of the 2nd edition of PLS-SEM Using R: A Workbook — which will be open access and free to download.">
 
-<title>SEMinR News – SEMinR</title>
+<title>The Video Series is Here: Five Tutorials on PLS-SEM in R – SEMinR</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,22 +29,20 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./images/seminr_logos/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6500b8d01f4a159f66587832295e02fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../images/seminr_logos/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6500b8d01f4a159f66587832295e02fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -57,65 +58,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -126,9 +69,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/seminr_logos/seminr-logo-white.png" alt="" class="navbar-logo light-content">
-    <img src="./images/seminr_logos/seminr-logo-white.png" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/seminr_logos/seminr-logo-white.png" alt="" class="navbar-logo light-content">
+    <img src="../../images/seminr_logos/seminr-logo-white.png" alt="" class="navbar-logo dark-content">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -137,23 +80,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./packages.html"> 
+    <a class="nav-link" href="../../packages.html"> 
 <span class="menu-text">Packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./extras.html"> 
+    <a class="nav-link" href="../../extras.html"> 
 <span class="menu-text">Extras</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources.html"> 
+    <a class="nav-link" href="../../resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./community.html"> 
+    <a class="nav-link" href="../../community.html"> 
 <span class="menu-text">Community</span></a>
   </li>  
 </ul>
@@ -175,14 +118,31 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SEMinR News</h1>
+<h1 class="title">The Video Series is Here: Five Tutorials on PLS-SEM in R</h1>
 </div>
 
+<div>
+  <div class="description">
+    <p>Five new tutorial videos walk through a complete PLS-SEM analysis in R with SEMinR, each paired with a chapter of the 2nd edition of <em>PLS-SEM Using R: A Workbook</em> — which will be open access and free to download.</p>
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://nicholasdanks.com/">Nicholas Danks</a> </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 9, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -192,240 +152,29 @@ window.Quarto = {
 </header>
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/seminr-video-series.png" class="img-fluid figure-img"></p>
+<figcaption>Walking through a reflective measurement model in R with SEMinR</figcaption>
+</figure>
+</div>
+<p>The video series is here! 🎉</p>
+<p>I’ve recorded five tutorial videos walking through PLS-SEM analysis in R with SEMinR, each one paired with a chapter of the 2nd edition of <em>Partial Least Squares Structural Equation Modeling (PLS-SEM) Using R: A Workbook</em> (Hair, Hult, Ringle, Sarstedt, Danks &amp; Adler, Springer 2026). And thanks to the generous support of Marko Sarstedt and Christian Ringle, the new edition will be <strong>open access — completely free to download</strong>.</p>
+<p>All five videos are up on YouTube now:</p>
+<ol type="1">
+<li><a href="https://youtu.be/eIaWe4bv6Ys">Reflective Measurement</a> (Ch 4, ~34 min)</li>
+<li><a href="https://youtu.be/LzWLSFcxHtE">Formative Measurement</a> (Ch 5, ~23 min)</li>
+<li><a href="https://youtu.be/CYsFpshBW7I">Structural Model incl.&nbsp;PLSpredict &amp; CVPAT</a> (Ch 6, ~33 min)</li>
+<li><a href="https://youtu.be/2SpMM6wibHI">Mediation</a> (Ch 8, ~11 min)</li>
+<li><a href="https://youtu.be/yzoONNsk5ho">Moderation incl.&nbsp;MGA</a> (Ch 7, ~22 min)</li>
+</ol>
+<p>Each video uses the corporate reputation dataset bundled with SEMinR, so you can follow along in R as you watch. The code companions are at <a href="https://nicholasdanks.com/learn" class="uri">https://nicholasdanks.com/learn</a>.</p>
+<p>Whether you’re a student running your first PLS model, a researcher switching from SmartPLS to R, or an instructor looking for ready-made teaching materials — I hope these help. More videos on advanced topics (higher-order constructs, etc.) are planned.</p>
+<p>If there’s something you wish I’d covered or explained differently, let me know in the comments on YouTube — I’ll work it into future videos.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1786204800000" data-listing-file-modified-sort="1786265675607" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="199">
-<div class="thumbnail"><a href="./posts/2026-08-09-video-series-pls-sem-in-r-with-seminr/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2026-08-09-video-series-pls-sem-in-r-with-seminr/images/seminr-video-series.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-08-09-video-series-pls-sem-in-r-with-seminr/index.html" class="no-external">The Video Series is Here: Five Tutorials on PLS-SEM in R</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-08-09-video-series-pls-sem-in-r-with-seminr/index.html" class="no-external">
-<p>Five new tutorial videos walk through a complete PLS-SEM analysis in R with SEMinR, each paired with a chapter of the 2nd edition of <em>PLS-SEM Using R: A Workbook</em> — which will be open access and free to download.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-08-09-video-series-pls-sem-in-r-with-seminr/index.html" class="no-external">
-<div class="listing-date">
-August 9, 2026
-</div>
-<div class="listing-author">
-Nicholas Danks
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1783526400000" data-listing-file-modified-sort="1783658213874" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="952">
-<div class="thumbnail"><a href="./posts/2026-07-09-one-seminr-many-languages/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2026-07-09-one-seminr-many-languages/images/SEMinR-ports.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-07-09-one-seminr-many-languages/index.html" class="no-external">One SEMinR, Many Languages</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-07-09-one-seminr-many-languages/index.html" class="no-external">
-<p>SEMinR is no longer R-only: experimental ports now bring the same toolkit to other languages, starting with Python and JavaScript/TypeScript. Each port mirrors the R API and is validated for numerical parity against the R package using golden fixtures — so you can stay in the language your model analysis lives in.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-07-09-one-seminr-many-languages/index.html" class="no-external">
-<div class="listing-date">
-July 9, 2026
-</div>
-<div class="listing-author">
-Soumya Ray
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1779638400000" data-listing-file-modified-sort="1783663632469" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
-<div class="thumbnail"><a href="./posts/2026-05-25-seminr-250-released/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2026-05-25-seminr-250-released/images/SEMinR-logo.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-05-25-seminr-250-released/index.html" class="no-external">SEMinR 2.5.0 Released</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-05-25-seminr-250-released/index.html" class="no-external">
-<p>SEMinR v2.5.0 is now on CRAN, bringing prediction to every interaction type, more flexible plots, a public accessor API for developers, and a round of bug fixes.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-05-25-seminr-250-released/index.html" class="no-external">
-<div class="listing-date">
-May 25, 2026
-</div>
-<div class="listing-author">
-Soumya Ray
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1776700800000" data-listing-file-modified-sort="1783663632467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="402">
-<div class="thumbnail"><a href="./posts/2026-04-21-introducing-seminrextras/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2026-04-21-introducing-seminrextras/images/SEMinR-logo.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-04-21-introducing-seminrextras/index.html" class="no-external">Introducing seminrExtras</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-04-21-introducing-seminrextras/index.html" class="no-external">
-<p>seminrExtras 1.0.0 is now on CRAN — a companion package for SEMinR that brings the advanced PLS-SEM assessment toolkit (prediction, necessity, heterogeneity, measurement confirmation, and overfit diagnostics) into R.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-04-21-introducing-seminrextras/index.html" class="no-external">
-<div class="listing-date">
-April 21, 2026
-</div>
-<div class="listing-author">
-Nicholas Danks
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1771603200000" data-listing-file-modified-sort="1783663632466" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="389">
-<div class="thumbnail"><a href="./posts/2026-02-21-seminr-242-on-cran/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2026-02-21-seminr-242-on-cran/images/SEMinR-logo.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-02-21-seminr-242-on-cran/index.html" class="no-external">SEMinR v2.4.2 on CRAN</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2026-02-21-seminr-242-on-cran/index.html" class="no-external">
-<p>SEMinR v2.4.2 is now on CRAN. Rounding up everything that landed across v2.4.0 and v2.4.2 — bootstrap p-values, missing-data handling, and a batch of bug fixes — plus a look at what’s coming next.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-02-21-seminr-242-on-cran/index.html" class="no-external">
-<div class="listing-date">
-February 21, 2026
-</div>
-<div class="listing-author">
-Soumya Ray
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1677513600000" data-listing-file-modified-sort="1783663632465" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
-<div class="thumbnail"><a href="./posts/2023-02-28-composite-overfit-analysis-framework-published/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2023-02-28-composite-overfit-analysis-framework-published/images/coa-management-science.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-02-28-composite-overfit-analysis-framework-published/index.html" class="no-external">The Composite Overfit Analysis Framework is Published in Management Science</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2023-02-28-composite-overfit-analysis-framework-published/index.html" class="no-external">
-<p>Nicholas Danks’ article — the bulk of his dissertation work — introducing the Composite Overfit Analysis (COA) Framework for assessing the out-of-sample generalizability of construct-based models is now published in Management Science.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-02-28-composite-overfit-analysis-framework-published/index.html" class="no-external">
-<div class="listing-date">
-February 28, 2023
-</div>
-<div class="listing-author">
-Nicholas Danks
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1641312000000" data-listing-file-modified-sort="1783663632462" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
-<div class="thumbnail"><a href="./posts/2022-01-05-seminr-23-brings-pls-mga/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2022-01-05-seminr-23-brings-pls-mga/images/SEMinR-v2_3.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2022-01-05-seminr-23-brings-pls-mga/index.html" class="no-external">SEMinR 2.3 Brings PLS-MGA</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2022-01-05-seminr-23-brings-pls-mga/index.html" class="no-external">
-<p>SEMinR v2.3 is available for installation from CRAN, and it brings the most requested feature from our users: PLS-MGA.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2022-01-05-seminr-23-brings-pls-mga/index.html" class="no-external">
-<div class="listing-date">
-January 5, 2022
-</div>
-<div class="listing-author">
-Soumya Ray
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1641225600000" data-listing-file-modified-sort="1783663632463" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="53">
-<div class="thumbnail"><a href="./posts/2022-01-06-pls-sem-using-r-book-now-open-access/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2022-01-06-pls-sem-using-r-book-now-open-access/images/978-3-030-80519-7.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2022-01-06-pls-sem-using-r-book-now-open-access/index.html" class="no-external">Our Free to Download Book, PLS-SEM Using R, is a Huge Hit!</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2022-01-06-pls-sem-using-r-book-now-open-access/index.html" class="no-external">
-<p>Our textbook for PLS-SEM Using R has now reached over 45,000 downloads. The book is completely open-access and is accompanied by SEMinR which is free to download.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2022-01-06-pls-sem-using-r-book-now-open-access/index.html" class="no-external">
-<div class="listing-date">
-January 4, 2022
-</div>
-<div class="listing-author">
-Nicholas Danks
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1621958400000" data-listing-file-modified-sort="1783663632460" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
-<div class="thumbnail"><a href="./posts/2021-05-26-seminr-20-released/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/2021-05-26-seminr-20-released/images/SEMinR-v2_0.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-05-26-seminr-20-released/index.html" class="no-external">SEMinR 2.0 Released</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2021-05-26-seminr-20-released/index.html" class="no-external">
-<p>We’re proud to announce the release of SEMinR v2.0! So many new features, including the single most requested feature of model visualization created by our brilliant new co-author, André Calero Valdez, and his team at Aachen University.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-05-26-seminr-20-released/index.html" class="no-external">
-<div class="listing-date">
-May 26, 2021
-</div>
-<div class="listing-author">
-Soumya Ray
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
